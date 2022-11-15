@@ -1,7 +1,7 @@
-- NOM : 
-- PRÉNOM :
-- URL du site :
-- URL FIGMA :
+- NOM : Tas
+- PRÉNOM : Atnan
+- URL du site : 
+- URL FIGMA : https://www.figma.com/file/IPAxYtjGL1gltkiickE3qe/Maquette-Projet-S1?node-id=0%3A1
 
 # Structure de départ pour le projet individuel.
 
