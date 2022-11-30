@@ -7,3 +7,28 @@
     <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css">  
+    <header>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      Class="header_menuBtn"
+      >   
+      <img src="public/img/icone_menu.svg">
+    </button>
+      <h1><a href="index.html" >Reboot</a></h1>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
+      class="menu"
+      >
+        
+        <ul>
+          <dl>
+            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
+            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
+              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+              <li><a href="ArticleFC.html">Fight Club</a></li>
+              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+              <li><a href="ArticleVS.html">Vinland Saga</a></li>
+              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
+              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+          
+        </ul>
+      </nav>
+    </header>
