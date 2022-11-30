@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
+  <head>
+   
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/style.css"> 
+    </head>
+    <body> 
+    <header>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      Class="header_menuBtn"
+      >   
+      <img src="public/img/icone_menu.svg">
+    </button>
+      <h1><a href="index.html" >Reboot</a></h1>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
+      class="menu"
+      >
+        
+        <ul>
+          <dl>
+            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
+            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
+              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+              <li><a href="ArticleFC.html">Fight Club</a></li>
+              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+              <li><a href="ArticleVS.html">Vinland Saga</a></li>
+              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
+              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+          
+        </ul>
+      </nav>
+    </header>
+    <h1>Accorhotel Arena</h1>
+
+    <p>Le Palais omnisport de Paris-Bercy se situe sur le boulevard de Bercy,
+         dans le 12ème arrondissement de Paris, en face du ministère des Finances et de la Seine. <br> <br> 
+
+        Ce palais est connu pour sa grande polyvalence car il accueille toutes sortes d’évènement puisque la salle est entièrement modulable,
+         aussi bien des évènements musicaux, en faisant des concerts énormes avec les plus grands artistes français, 
+         mais également du monde entier (avec l’exemple de Kanye West ou bien de Drake), 
+         que sportives, en accueillant toutes sortes de compétition (tennis (Paris Rolex Master),
+          voiles, rallye (Super Stock-Car anciennement), patinage artistique, E-sport 
+          (avec la Karmine Corp qui a crée l’un des plus grands évènements de l’histoire de l’E-sport, le KCX2). <br> <br></p>
+
+          <img class="images" src="public/img/KCX2.webp">
+          <p>Photo prise durant le KCX2</p>
+        <br> <br>
+        <hr class="hrpage"> <br> <br>
+
+        <p>Michel Andrault et Pierre Parat sont à l’œuvre de cet endroit et pleins d’autres endroits également (le centre Tolbiac, la tour Totem,
+         l’ensemble de logements Les Coudriers), en créant un bâtiment a forme pyramidale composé de pelouse, vitre, métaux, béton. <br> <br></p>
+         <img class="images" src="public/img/Michel_Andrault.webp">
+         <p>Photo de Michel Andrault <br> <br>
+            La charpente métallique a été réalisée par Jean Prouvé qui a également réalisé le Palais de la Porte Dorée, 
+            l’école Boulle, le foyer de jeunes de Charonne, la résidence de l’ambassadeur du Japon,
+             le siège de la Fédération nationale du Bâtiment, le 55 Grenelle.
+             Elle est tenue par 4 piliers de béton de 30m chacun. Ce lieu est plus communément appelé le Bercy, 
+             qui est un de ces nombreux noms. <br> <br>
+             Il peut contenir jusqu’à 17000 personnes avec une superficie de +55000 m².
+             </p>
+             <br> <br>
+             <hr class="hrpage"> <br> <br>
+
+             <img class="images" src="public/img/Orelsan_AA.webp">
+             <p>L’artiste Orelsan en concert à l’Accord Arena</p>
+
+             <p>Le palais omnisport a été inauguré le 3 février 1984. Après 30 ans d’existence à accueillir le public,
+                 un marché a été passé entre la mairie de Paris et le groupe hôtelier Accor pour une rénovation, 
+                 fermé jusqu’en 2015 le palais a réouvert sous le nom d’AccordHotels Arena. </p> <br> <br>
+                 <p>Le groupe leader mondiale de l’hôtellerie a donc reçu une publicité gigantesque, propriétaire de Mercure,
+                     Novotel, Formule 1, Ibis, Adagio, Sofitel, Pullman, etc... <br> <br>
+
+                    J’ai écris cet article sur ce lieu qui m’a marqué car j’y suis allé pour assister au plus beau concert de ma vie,
+                     celui de l’artiste Orelsan</p>
+                    <br> <br>
+                     <hr class="hrpage"> <br> <br>
+
+                     N’hésitez pas à lire d’autres articles ! <br> <br>
+
+
+	</body>
+	<div class="carrousel" x-data="{}">
+		<div class="carrousel_parent-ecrans">
+			<div id="ecran-1" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/FightClub_logo.webp" alt="image ecran 1">
+					<figcaption>Fight Club</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-2" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/JoJo.webp" alt="image ecran 2">
+					<figcaption>JoJo's Bizarre Adventures</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-3" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/Crypto.webp" alt="image ecran 3">
+					<figcaption>Web 3.0</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-4" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/addiction_ecran.webp" alt="image ecran 4">
+					<figcaption>Dangers des écrans</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-5" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
+					<figcaption>Vinland Saga</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-6" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/PnL.webp" alt="image ecran 5">
+					<figcaption>PNL</figcaption>
+				</figure>
+			</div>
+		</div>
+		
+	</div>
+		<br>
+	<footer class="footer">
+		<div class="textblanc">
+		<h3>Donnez votre avis !  </h3> 
+		<p>formulaire de contact</p> <br> <br>
+        <hr class="hrfoot"> <br> <br>
+		<h3>Mentions légales</h3>
+		<p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p> <br> <br>
+		<img class="logo" src="public/img/Logo_mmi.svg"> <br> <br>
+        <hr class="hrfoot"> <br> <br>
+		<h3>Me contacter</h3>
+		</div>
+		<div class="contact, textblanc"> Atnan Tas C2 <br>
+		 atnan.tas68@gmail.com
+	   </div>
+	   <li class=reseauxsociaux>
+	   
+		 <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
+		 <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
+	   
+		 <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
+		 <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
+	   
+		 <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
+		 <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
+	   </li>	   
+	   </footer>
+</html>
+
+
+
