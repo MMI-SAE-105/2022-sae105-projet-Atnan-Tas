@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
+  	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Test menu</title>
+		<script defer src="https://unpkg.com/alpinejs"></script>
+		<script src="//unpkg.com/alpinejs" defer></script>
+
+		<link rel="stylesheet" href="src/css/style.css">  
+	</head>
+	<header>
+	<button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      Class="header_menuBtn"
+      > 
+      <img src="public/img/icone_menu.svg">
+    </button>
+      <h1>
+		<a href="index.html" >Reboot</a>
+	</h1>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
+      class="menu"
+      >
+	  <ul>
+		<dl>
+		  <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
+		  <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
+			<li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+			<li><a href="ArticleFC.html">Fight Club</a></li>
+			<li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+			<li><a href="ArticleVS.html">Vinland Saga</a></li>
+			<li><a href="ArticleEcran.html">Dangers des écrans</a></li>
+			<li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+		
+	  </ul>
+	</nav>
+	</header>
+	<body>
+		<h1>JoJo's Bizarre Adventures</h1>
+		<p>JoJo’s Bizarre Adventure est un manga crée en 1988 par le célèbre auteur Hirohiko Araki. 
+		Elle se compose en 8 différentes parties, qui sont toutes différentes les unes des autres avec des protagonsites différents,
+		 mais toutes liés du début à la fin.</p>
+		 <img class="images" src="public/img/hirohiko_araki.webp">
+		 photographie de hirohiko araki
+		 <p>-	Partie 1 : Phantom Blood (Jonathan Joestar) <br>
+			-	Partie 2: Battle Tendency (Joseph Joestar) <br>
+			-	Partie 3 : Stardust Crusaders (Jotaro Kujo) <br> 
+			-	Partie 4 : Diamond is Unbreakable (Josuke* Higashikata) <br>
+			-	Partie 5 : Golden Wind (Giorno Giovana) <br>
+			-	Partie 6 : Stone Ocean (Jolyne Kujo/Cujoh) <br>
+			-	Partie 7 : Steel Ball Run (Johnny Joestar) <br>
+			-	Partie 8 : JoJolion (Josuke* Higashikata) <br> <br>
+			
+			*Le « Suke » dans Josuke peut se prononcer également « Jo »
+
+			</p>
+			<p>Prépublié dans un premier temps entre 1986 et 2004 dans le Weekly Shônen Jump (WSJ)
+			 puis en 2005 dans le Ultra Jump, qui est un catalogue spécialisé dans les mangas 
+			 destiné à un public adulte.
+			</p>
+			<img class="images" src="public/img/wsj_jojo.webp">
+			Couverture d'un WSJ affichant Josuke
+
+			<p>Cette histoire extrêmement farfelue suit la vie et les aventures de la famille Joestar
+				 sur plusieurs générations. Un seul ennemi est à la cause de tous ces évènements qui 
+				 tourmentent la famille Joestar, Dio Brando.</p>
+
+			<p>Ses actes ont un effet papillon absurde, passant de combat contre des vampires
+				 dans la partie 1 (Phantom Blood) et la partie 2 (Battle Tendency).</p>
+				 <p>A une traque contre un ennemi commun, avec un humour très absurde
+					 et des personnages musclés de manière aberrante dans la partie 3 (Stardust Crusaders).</p>
+					 <p>Qui suit avec une histoire avec un genre policier dans la partie 4 (Diamond is Unbreakable). </p>
+					 <p>Et un drame en plein milieu de la Mafia italienne dans la partie 5 (Golden Wind).</p>
+
+			<img class="images" src="public//img/Joseph_wamuu.webp">
+			Joseph Joestar combattant un vampire.
+			<img class="images" src="public/img/jotaro_kira.webp">
+			Jotaro Kujo, venant de trouver et coincer un tueur en série.
+			<img class="images" src="public/img/Giorno_boss.webp">
+			Giorno Giovanna, ayant finalement obtenu le poste de parrain de la mafia. <br> <br>
+			<p>JJBA (sigle de JoJo’s Bizarre Adventure) est l’un des mangas les plus vendu au monde avec plus de 100 millions de volume commercialisé presque partout dans le monde.
+
+				Ce succès leurs a permis de faire des collaborations avec pleins de marques, et surtout des marques de luxe.
+				
+				Parmi toutes les collaborations il y a : <br> <br>
+				-	Mercedes, qui ont créé une voiture avec une carrosserie. contenant des onomatopées japonaises qui sont unique à JoJo’s.
+				<img class="images" src="public/img/Mercedes_JoJo.webp">
+				-	Gucci, qui ont publiés dans les boutiques et postés sur les réseaux sociaux des personnages de JoJo’s avec des vêtements et accessoires Gucci.
+				<img class="images" src="public/img/Gucci_jojo.webp">
+				-	Balenciaga, un personnage de jojo vêtu de Balenciaga sur une couverture de catalogue Vogue « Uomo ».
+				<img class="images" src="public/img/Uomo_JoJo.webp">
+				-	Seiko, marque de montre de luxe qui ont créé une série de montre à l’effigie de JoJo’s. 
+				<img class="images" src="public/img/Seiko_JoJo.webp">
+				J’ai écris cet article, car quelque années auparavent, j’ai découvert pour la première fois cette oeuvre, 
+				je n’avais jamais lu une histoire aussi bien écrite, drôle, intrigante, attachante avec un système de pouvoir unique. <br> <br>
+
+J’aimerais donc vous partager quelque unes des planches de ce manga qui m’ont vraiment plu.	
+				</p>
+				<img class="images" src="public/img/JoJo_Sbr_1.webp">
+				<img class="images" src="public/img/JoJo_sbr_2.webp">
+				<img class="images" src="public/img/JoJo_sbr_3.webp">
+				N’hésitez pas à lire d’autres articles ! <br> <br>
+
+
+	</body>
+	<div class="carrousel" x-data="{}">
+		<div class="carrousel_parent-ecrans">
+			<div id="ecran-1" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/FightClub_logo.webp" alt="image ecran 1">
+					<figcaption>Fight Club</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-2" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/Accor_arena.webp" alt="image ecran 2">
+					<figcaption>Accor Arena</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-3" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/Crypto.webp" alt="image ecran 3">
+					<figcaption>Web 3.0</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-4" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/addiction_ecran.webp" alt="image ecran 4">
+					<figcaption>Dangers des écrans</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-5" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
+					<figcaption>Vinland Saga</figcaption>
+				</figure>
+			</div>
+			<div id="ecran-6" class="carrousel_ecran">
+				<figure>
+					<img src="public/img/PnL.webp" alt="image ecran 5">
+					<figcaption>PNL</figcaption>
+				</figure>
+			</div>
+		</div>
+		
+	</div>
+		<br>
+	<footer class="footer">
+		<div class="textblanc">
+		<h3>Donnez votre avis !  </h3> 
+		<p>formulaire de contact</p>
+		<h3>Mentions légales</h3>
+		<p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
+		<img class="logo" src="public/img/Logo_mmi.svg">
+		<h3>Me contacter</h3>
+		</div>
+		<div class="contact, textblanc"> Atnan Tas C2 <br>
+		 atnan.tas68@gmail.com
+	   </div>
+	   <li class=reseauxsociaux>
+	   
+		 <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
+		 <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
+	   
+		 <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
+		 <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
+	   
+		 <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
+		 <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
+	   </li>	   
+	   </footer>
+</html>
+	

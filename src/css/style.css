@@ -1,0 +1,150 @@
+
+@import url("./utils/variables.css");
+
+.menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 217vw;
+        background: #8f24c4;
+        display: grid;
+        place-content: center;
+      }
+      .header_menuBtn {
+        position: relative;
+        z-index: 10;
+      }    
+      .noscroll,
+.noscroll body {
+  overflow: hidden;
+}
+
+.logo {
+
+  display: block;
+  margin: 0 auto;
+width: 40px;
+height: 40px;
+}
+
+.logo_mmi {
+  background-color: #000;
+  width: 20px;
+  height: 20px;
+}
+
+.boite{
+  display:flex;
+  justify-content: center;
+}
+
+.p {
+  width: 80%;
+}
+
+img {
+  width: 80%;
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.Fond {
+  background-color: #f2f2f2;
+}
+
+.fightclub {
+  width: 250px;
+  height: 180px;
+}
+
+.footer {
+  background: linear-gradient(to bottom right, #8f24c4, #30144b);
+}
+
+.contact {
+
+  display: flex;
+  justify-content: center;
+}
+
+.images {
+  display: block;
+  margin: 0 auto;
+}
+
+.RS {
+  display: flex;
+ justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+.textblanc {
+  color: white;
+}
+
+.reseau{
+  width: auto;
+  height: auto;
+
+}
+
+.reseauxsociaux{
+  display: flex;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.reseaufb {
+  
+  margin: 10px;
+}
+.reseauinsta {
+  margin:10px;
+}
+.reseautwi{
+  margin:10px
+}
+
+img {
+  display: flex;
+    width: 100%;
+  }
+.carrousel_parent-ecrans {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  }
+
+.carrousel_ecran {
+  flex: none;
+  width: 100%;
+  scroll-snap-align: start;
+  }
+.carrousel_ecran figure {
+  margin: 0%; 
+  }
+
+  .hr {
+    margin: 0 auto;
+    width: 250px;
+  }
+
+  .hrpage {
+    margin: 0 auto;
+    width: 250px;
+    background-color: black;
+  }
+
+  .menuBtn {
+    width: 50px;
+    height: 50px;
+  }
