@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/style.css">  
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Reboot} -->
+    <header>
+      <aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      Class="header_menuBtn"
+      > 
+      <img src="public/img/icone_menu.svg">
+    
+      <h1>Reboot</h1>
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
+      class="menu"
+      >
+        
+        <ul>
+          <dl>
+            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
+            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
+              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+              <li><a href="ArticleFC.html">Fight Club</a></li>
+              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+              <li><a href="ArticleVS.html">Vinland Saga</a></li>
+              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
+              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+          
+        </ul>
+      </nav>
+      <p>
+        J'ai voulu présenter des élèments marquant de ma vie, en voilà une partie.
+      </p>
+    </header>
+
+    <!-- h2>lorem2^p>lorem -->
+    <h2>Accor Arena</h2>
+<div>
+    <img class="images" src="public/img/Accor_arena.webp" alt="Accor Arena">
+  </div>
+    <p>
+      Apprenez-en plus au sujet de la plus grande salle d’évènement polyvalente de France.
+      <button>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        en savoir +
+      </button>
+    </p>
+  
+   <!-- h2>h2 {JoJo's Bizarre adventures} -->
+    <h2>JoJo's Bizarre Adventures</h2>
+    <a href="ArticleJoJo.html">
+      <img class="images" src="public/img/JoJo.webp" alt="JoJo">
+    </a>
+
+        <p>
+    Découvrez les évènements autours de la famille Joestar.
+
+    <button>
+      en savoir +
+    </button>
+   </p>
+</body>
+<h2>Découvrez également  d'autres articles ici !</h2>
+<div class="carrousel" x-data="{}">
+  <div class="carrousel_parent-ecrans">
+    <div id="ecran-1" class="carrousel_ecran">
+      <a href="ArticleFC.html">
+      <figure>
+        <img src="public/img/FightClub_logo.webp" alt="image ecran 1">
+        <figcaption>Fight Club</figcaption>
+      </figure>
+      </a>
+    </div>
+    <div id="ecran-3" class="carrousel_ecran">
+      <a href="ArticleWeb3.html">
+      <figure>
+        <img src="public/img/Crypto.webp" alt="image ecran 3">
+        <figcaption>Web 3.0</figcaption>
+      </figure>
+      </a>
+    </div>
+    <div id="ecran-4" class="carrousel_ecran">
+      <a href="ArticleEcran.html">
+      <figure>
+        <img src="public/img/addiction_ecran.webp" alt="image ecran 4">
+        <figcaption>Dangers des écrans</figcaption>
+      </figure>
+      </a>
+    </div>
+    <div id="ecran-5" class="carrousel_ecran">
+      <a href="ArticleVS.html">
+      <figure>
+        <img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
+        <figcaption>Vinland Saga</figcaption>
+      </figure>
+      </a>
+    </div>
+    <div id="ecran-6" class="carrousel_ecran">
+      <a href="ArticlePNL.html">
+      <figure>
+        <img src="public/img/PnL.webp" alt="image ecran 5">
+        <figcaption>PNL</figcaption>
+      </figure>
+      </a>
+    </div>
+  </div>
+  
+</div>
+
+<footer class="footer">
+  <div class="textblanc">
+  <h3>Donnez votre avis !  </h3> 
+  <p>formulaire de contact</p>
+  <hr class="hr">
+  <h3>Mentions légales</h3>
+  <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
+  <img class="logo" src="public/img/Logo_mmi.svg">
+  <hr class="hr">
+  <h3>Me contacter</h3>
+  </div>
+  <div class="contact, textblanc"> Atnan Tas C2 <br>
+   atnan.tas68@gmail.com
+   </div>
+   <li class=reseauxsociaux>
+   
+   <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
+   <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
+   
+   <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
+   <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
+   
+   <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
+   <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
+   </li>	 
+   <br> <br>  
+   <hr class="hr"> <br> <br> <br>
+   </footer>
+</html>
