@@ -154,3 +154,30 @@ img {
     width: 250px;
     background-color: rgb(255, 255, 255);
   }
+
+  .bouton_contacte_envoyer {
+    background: #161029;
+    border: 1px solid #8f24c4;
+    color: #FFFFFF;
+    margin: 1%;
+  }
+  .formulaire {
+    border: 2px solid #8f24c4;
+  }
+  .texte_contacte {
+    margin: 2%;
+    font-size: 18px;
+  }
+  .rectangle_contacte {
+    display: block;
+    margin: auto;
+    background: #FAFAFA;
+    border: 1px solid #8f24c4;
+    border-radius: 4px;
+    width: 313px;
+  }
+
+  
+
+
+  
