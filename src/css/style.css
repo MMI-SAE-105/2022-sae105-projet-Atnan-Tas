@@ -99,6 +99,7 @@ img {
   display: flex;
   margin-top: 50px;
   margin-left: 10px;
+  justify-content: center;
 }
 .reseaufb {
   
@@ -108,7 +109,8 @@ img {
   margin:10px;
 }
 .reseautwi{
-  margin:10px
+  margin:10px;
+  
 }
 
 img {
@@ -156,10 +158,13 @@ img {
   }
 
   .bouton_contacte_envoyer {
-    background: #161029;
+    background: linear-gradient(#8f24c4, #30144b) ;
     border: 1px solid #8f24c4;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 1%;
+    width: 65px;
+    height: 30px;
+    border-radius: 5px;
   }
   .formulaire {
     border: 2px solid #8f24c4;
@@ -175,6 +180,17 @@ img {
     border: 1px solid #8f24c4;
     border-radius: 4px;
     width: 313px;
+  }
+
+  .info {
+    text-align: center;
+    border: 10px #30144b;
+    width: 297px;
+    height: 298px;
+    background: radial-gradient(#8f24c4, #30144b);
+    color: #ffffff;
+    padding: 0 auto;
+    margin: 0 auto;
   }
 
   
