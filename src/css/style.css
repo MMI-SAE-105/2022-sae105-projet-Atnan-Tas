@@ -1,5 +1,35 @@
 
-@import url("./utils/variables.css");
+@import url(./utils/variables.css);
+@import url(.base/main.css);
+@import url(./vendors/normalize.css);
+@font-face {
+  font-family: 'InterSemiBold';
+  src: url(./fonts/Inter-SemiBold.otf);
+}
+@font-face {
+  font-family: 'viga';
+  src: url(./fonts/Viga-Regular.otf);
+}
+
+@font-face {
+  font-family: "InterRegular";
+  src: url(./fonts/Inter-Regular.otf);
+}
+
+@font-face {
+  font-family: 'InterMedium';
+  src: url(./fonts/Inter-Medium.otf);
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url(./fonts/Helvetica.ttf);
+}
+
+@font-face {
+  font-family: 'HelveticaBold';
+  src: url(./fonts/Helvetica-Bold.ttf);
+}
 
 .menu {
         position: fixed;
@@ -135,15 +165,18 @@ img {
   margin: 0%; 
   }
 
-  .hr {
+  .hrgrand {
     margin: 0 auto;
-    width: 250px;
+    width: 310px;
+    background-color: #000;
+    height: 3px;
   }
 
   .hrpage {
     margin: 0 auto;
-    width: 250px;
+    width: 175px;
     background-color: black;
+    height: 3px;
   }
 
   .menuBtn {
@@ -193,7 +226,9 @@ img {
     margin: 0 auto;
   }
 
-  
+.titrepage {
+  text-align: center;
+}  
 
 
   
