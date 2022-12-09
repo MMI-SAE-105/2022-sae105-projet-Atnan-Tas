@@ -7,19 +7,22 @@
     <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css">  
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Reboot} -->
     <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
       Class="header_menuBtn"
-      >   
-      <img src="public/img/icone_menu.svg">
+      > 
+      <img src="public/img/icone_menu.svg" alt="menuhmrgr">
     </button>
-      <h1><a href="index.html" >Reboot</a></h1>
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
+    <h1><a href="index.html" >Reboot</a></h1>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
       class="menu"
       >
         
         <ul>
-          <dl>
             <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
             <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
               <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
@@ -27,8 +30,41 @@
               <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
               <li><a href="ArticleVS.html">Vinland Saga</a></li>
               <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
+              <li><a href="ArticleWeb3.html">Web 3.0</a></li>
+          <li><a href="AutreProjet.html">Autre projets</a></li></dd>
         </ul>
+        
+
       </nav>
     </header>
+
+    <footer class="footer">
+      <div class="textblanc">
+      <h3>Donnez votre avis !  </h3> 
+      <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
+      <hr class="hr">
+      <h3>Mentions légales</h3>
+      <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
+      <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
+      <hr class="hr">
+      <h3>Me contacter</h3>
+      </div>
+      <div class="contact, textblanc"> Atnan Tas C2 <br>
+      atnan.tas68@gmail.com
+      </div>
+      <div class=reseauxsociaux>
+      
+      <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
+      <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
+      
+      <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
+      <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
+      
+      <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
+      <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
+      </div>	 
+      <br> <br>  
+      <hr class="hr"> <br> <br> <br>
+      </footer>
+    </html>
+  
