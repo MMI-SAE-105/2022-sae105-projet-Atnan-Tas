@@ -4,7 +4,6 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Test menu</title>
       <script defer src="https://unpkg.com/alpinejs"></script>
       <link rel="stylesheet" href="src/css/style.css">  
     </head>
@@ -12,8 +11,7 @@
       <!-- https://emmet.io/ -->
       <!-- header>h1{Reboot} -->
       <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-        Class="header_menuBtn"
+      <button class="menu-btn" aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
         > 
         <img src="public/img/icone_menu.svg" alt="menuhmrgr">
       </button>
@@ -37,6 +35,9 @@
 
         </nav>
       </header>
+      <body>
+        
+      
         <p>
           J'ai voulu présenter des élèments marquant de ma vie, en voilà une partie.
         </p>
@@ -50,7 +51,7 @@
       <p class="tweet">
         Apprenez-en plus au sujet de la plus grande salle d’évènement polyvalente de France.
          </p>
-         <button>          
+         <button class="more">          
           en savoir +
         </button>
      
@@ -64,11 +65,10 @@
           <p class="tweet">
       Découvrez les évènements autours de la famille Joestar.
     </p>
-      <button>           en savoir +
+      <button class="more">           en savoir +
 
       </button>
     
-  </body>
   <h2>Découvrez également d'autres articles ici !</h2>
   <div class="carrousel" x-data="{}">
     <div class="carrousel_parent-ecrans">
@@ -115,21 +115,26 @@
     </div>
     
   </div>
-
+</body>
   <footer class="footer">
-    <div class="textblanc">
+    <div class="textblanc"> <br>
     <h3>Donnez votre avis !  </h3> 
     <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
+    <br>
     <hr class="hr">
+    <br>
     <h3>Mentions légales</h3>
-    <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
+    <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p> <br>
     <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
+    <br>
     <hr class="hr">
+    <br>
     <h3>Me contacter</h3>
     </div>
-    <div class="contact, textblanc"> Atnan Tas C2 <br>
-    atnan.tas68@gmail.com
+    <div class="contact textblanc"> Atnan Tas C2 <br>
     </div>
+     <p class="contact textblanc"> atnan.tas68@gmail.com</p>
+    
     <div class=reseauxsociaux>
     
     <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
