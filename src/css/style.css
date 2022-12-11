@@ -169,14 +169,14 @@ img {
     margin: 0 auto;
     width: 310px;
     background-color: #000;
-    height: 3px;
+    height: 1.5px;
   }
 
   .hrpage {
     margin: 0 auto;
     width: 175px;
     background-color: black;
-    height: 3px;
+    height: 1.5px;
   }
 
   .menu-btn {
