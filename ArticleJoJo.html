@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Test menu</title>
-		<script defer src="https://unpkg.com/alpinejs"></script>
-		<script src="//unpkg.com/alpinejs" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/style.css">  
+    <header>  
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      class="menu-btn"
+      >   
 
-		<link rel="stylesheet" href="src/css/style.css">  
-	</head>
-	<header>
-	<button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      Class="header_menuBtn"
-      > 
       <img src="public/img/icone_menu.svg">
-    </button>
-      <h1>
-		<a href="index.html" >Reboot</a>
-	</h1>
+    </button>  
+    
+     <a href="index.html">  
+      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
+     </a>
+    <img class="header" src="public/img/Header.svg">
+
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
       class="menu"
       >
-	  <ul>
-		<dl>
-		  <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-		  <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-			<li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-			<li><a href="ArticleFC.html">Fight Club</a></li>
-			<li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-			<li><a href="ArticleVS.html">Vinland Saga</a></li>
-			<li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-			<li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-		
-	  </ul>
-	</nav>
-	</header>
+        
+        <ul>
+          <dl>
+            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
+            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
+              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+              <li><a href="ArticleFC.html">Fight Club</a></li>
+              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+              <li><a href="ArticleVS.html">Vinland Saga</a></li>
+              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
+              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+          
+        </ul>
+      </nav>
+    </header>
 	<body>
 		<h1>JoJo's Bizarre Adventures</h1>
 		<p>JoJo’s Bizarre Adventure est un manga crée en 1988 par le célèbre auteur Hirohiko Araki. 

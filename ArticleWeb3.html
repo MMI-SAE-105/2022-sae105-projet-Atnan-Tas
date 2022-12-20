@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css">  
-    <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      Class="header_menuBtn"
+    <header>  
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      class="menu-btn"
       >   
+
       <img src="public/img/icone_menu.svg">
-    </button>
-      <h1><a href="index.html" >Reboot</a></h1>
+    </button>  
+    
+     <a href="index.html">  
+      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
+     </a>
+    <img class="header" src="public/img/Header.svg">
+
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
       class="menu"
       >

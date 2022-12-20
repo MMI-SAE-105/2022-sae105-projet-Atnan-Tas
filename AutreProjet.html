@@ -7,22 +7,25 @@
     <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css">  
-  </head>
-  <body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{Reboot} -->
-    <header>
+    <header>  
     <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      Class="header_menuBtn"
-      > 
-      <img src="public/img/icone_menu.svg" alt="menuhmrgr">
-    </button>
-    <h1><a href="index.html" >Reboot</a></h1>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
+      class="menu-btn"
+      >   
+
+      <img src="public/img/icone_menu.svg">
+    </button>  
+    
+     <a href="index.html">  
+      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
+     </a>
+    <img class="header" src="public/img/Header.svg">
+
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
       class="menu"
       >
         
         <ul>
+          <dl>
             <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
             <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
               <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
@@ -30,11 +33,9 @@
               <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
               <li><a href="ArticleVS.html">Vinland Saga</a></li>
               <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li>
-          <li><a href="AutreProjet.html">Autre projets</a></li></dd>
+              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+          
         </ul>
-        
-
       </nav>
     </header>
 

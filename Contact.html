@@ -7,15 +7,19 @@
     <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css">  
-    <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="header_menuBtn"
+    <header>  
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
+      class="menu-btn"
       >   
-      <img src="public/img/icone_menu.svg">
-    </button>      
-    <img class="header" src="public/img/Group 38.svg">
 
-      <h1><a href="index.html" >Reboot</a></h1>
+      <img src="public/img/icone_menu.svg">
+    </button>  
+    
+     <a href="index.html">  
+      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
+     </a>
+    <img class="header" src="public/img/Header.svg">
+
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
       class="menu"
       >
