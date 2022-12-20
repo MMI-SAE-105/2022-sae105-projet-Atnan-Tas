@@ -19,7 +19,7 @@
         place-content: center;
         z-index: 31;
       }
-      .header_menuBtn {
+      .menu-btn {
         position: absolute;
         z-index: 32;
         right: 10px;
@@ -273,4 +273,19 @@ z-index: 20;
   h2 {
     font-size: 22px;
     font-family: 'Viga', sans-serif;
+  }
+
+  .tag {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    padding-top: 150px;
+  }
+
+  .Reboot {
+    width: 58px;
+    height: 64px;
+    position: absolute;
+    z-index: 32;
+    top: 10px;
+    left: 10px;
   }
