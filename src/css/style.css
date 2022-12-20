@@ -2,34 +2,11 @@
 @import url(./utils/variables.css);
 @import url(.base/main.css);
 @import url(./vendors/normalize.css);
-@font-face {
-  font-family: 'InterSemiBold';
-  src: url(./fonts/Inter-SemiBold.otf);
-}
-@font-face {
-  font-family: 'viga';
-  src: url(./fonts/Viga-Regular.otf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Viga&display=swap');
 
-@font-face {
-  font-family: "InterRegular";
-  src: url(./fonts/Inter-Regular.otf);
-}
 
-@font-face {
-  font-family: 'InterMedium';
-  src: url(./fonts/Inter-Medium.otf);
-}
 
-@font-face {
-  font-family: 'Helvetica';
-  src: url(./fonts/Helvetica.ttf);
-}
-
-@font-face {
-  font-family: 'HelveticaBold';
-  src: url(./fonts/Helvetica-Bold.ttf);
-}
 
 .menu {
         position: fixed;
@@ -40,10 +17,15 @@
         background: linear-gradient(to bottom right, #8f24c4, #30144b);
         display: grid;
         place-content: center;
+        z-index: 31;
       }
       .header_menuBtn {
-        position: relative;
-        z-index: 10;
+        position: absolute;
+        z-index: 32;
+        right: 10px;
+        top: 10px;
+        background: none;
+        border: none;
       }    
       .noscroll,
 .noscroll body {
@@ -169,14 +151,14 @@ img {
     margin: 0 auto;
     width: 310px;
     background-color: #000;
-    height: 1.5px;
+    height: 1px;
   }
 
   .hrpage {
     margin: 0 auto;
     width: 175px;
     background-color: black;
-    height: 1.5px;
+    height: 0.5px;
   }
 
   .menu-btn {
@@ -223,7 +205,13 @@ img {
     background: radial-gradient(#8f24c4, #30144b);
     color: #ffffff;
     padding: 25px;
-    margin: 0 auto;
+    margin: 100px auto;
+    margin-bottom: 20px;
+   
+  }
+
+  .bio {
+    padding: 5px;
   }
 
 .titrepage {
@@ -231,7 +219,8 @@ img {
 }  
 
 .header {
-z-index: 1;
+position: absolute;
+z-index: 20;
 }
 
 .more {
@@ -266,4 +255,22 @@ z-index: 1;
 .tweet {
   color: #fff;
   background: linear-gradient(to bottom right, #8f24c4, #30144b);
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  }
+
+  .titrecarrousel {
+    font-family: 'Viga', sans-serif;
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-family: 'Viga', sans-serif;
   }
