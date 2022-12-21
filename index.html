@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
+    <title>Reboot</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/css/style.css">  
     <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+    <div class="toggle">
+      <i class="fa-solid fa-bars ouvrir"></i>
+      <i class="fa-solid fa-xmark fermer"></i>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
+    </div> 
     
      <a href="index.html">  
       <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
