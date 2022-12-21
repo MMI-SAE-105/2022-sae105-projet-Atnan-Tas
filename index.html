@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reboot</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     <link rel="stylesheet" href="src/css/style.css">  
+    </head>
+    <body>
     <header>  
     <div class="toggle">
       <i class="fa-solid fa-bars ouvrir"></i>
@@ -20,11 +23,9 @@
      </a>
     <img class="header" src="public/img/Header.svg">
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
+      
         
-        <ul>
+        <ul class="menu">
           <dl>
             <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
             <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
@@ -41,7 +42,7 @@
        <p class="tag">
           J'ai voulu présenter des élèments marquant de ma vie, en voilà une partie.
         </p>
-        <body>
+        
         
       
        
@@ -119,7 +120,7 @@
     </div>
     
   </div>
-</body>
+
   <footer class="footer">
     <div class="textblanc"> <br>
     <h3>Donnez votre avis !  </h3> 
@@ -153,4 +154,5 @@
     <br> <br>  
     <hr class="hr"> <br> <br> <br>
     </footer>
+  </body>
   </html>

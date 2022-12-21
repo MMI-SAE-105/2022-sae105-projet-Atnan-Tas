@@ -12,17 +12,7 @@
   box-sizing: border-box;
 }
 
-.menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 217vw;
-        background: linear-gradient(to bottom right, #8f24c4, #30144b);
-        display: grid;
-        place-content: center;
-        z-index: 31;
-      }
+
       .menu-btn {
         position: absolute;
         z-index: 32;
@@ -294,4 +284,45 @@ z-index: 20;
     z-index: 32;
     top: 20px;
     left: 20px;
+  }
+
+  .toggle {
+    display: block;
+    position: absolute;
+    z-index: 32;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 33;
+  }
+
+  .ouvrir {
+    display: block;
+}
+
+.fermer {
+    display: none;
+}
+
+.open .ouvrir {
+    display: none;
+}
+
+.open .fermer {
+    display: block;
+}
+
+.menu {
+  background: linear-gradient(to bottom right, #8f24c4, #30144b);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 1s;
+      }
+
+  .open .menu {
+    transform: translateX(0%);
   }
