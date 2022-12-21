@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reboot</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <script src="app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     <link rel="stylesheet" href="src/css/style.css">  
     </head>
     <body>
     <header>  
+      <nav>
     <div class="toggle">
       <i class="fa-solid fa-bars ouvrir"></i>
       <i class="fa-solid fa-xmark fermer"></i>
@@ -27,18 +27,23 @@
         
         <ul class="menu">
           <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
+            <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+              <p class="menuarticle">Articles</p>
+            </dt>
+            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+              <li class="liste"><a class="liste" href="#">Accor Arena</a></li>
+              <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+              <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+              <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+              <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+              <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+              <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
           
         </ul>
       </nav>
     </header>
+    <script src="app.js"></script>
+
        <p class="tag">
           J'ai voulu présenter des élèments marquant de ma vie, en voilà une partie.
         </p>
