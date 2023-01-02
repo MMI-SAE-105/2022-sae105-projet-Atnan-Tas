@@ -1,26 +1,34 @@
-input[type=text], select, textarea {
-    width: 95%;
-    padding: 12px;
-    border: 2px solid #8f24c4;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    margin-left: 10px;
-  }
-  
-  input[type=submit] {
-    background-color: var(--violet-principal);
-    color: var(--fond-site);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    margin-left: 10px;
-
-  }
-  
-  .submit{
-    background-color: var(--violet-principal);
-  }
+.bouton_contacte_envoyer {
+  background: var(--violet-principal);
+  border: none;
+  color: #f5f5f5;
+  margin: 1%;
+  border-radius: 6px;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  margin-left: 290px;
+  font-family: 'inter';
+}
+.formulaire {
+  border: 2px solid var(--violet-principal);
+  margin: 8px;
+}
+.texte_contacte {
+  font-family: 'inter';
+  font-weight: bold;
+  margin: 2%;
+  font-size: 18px;
+}
+.rectangle_contacte {
+  display: block;
+  margin: auto;
+  background: #FAFAFA;
+  border: 1px solid var(--violet-principal);
+  box-shadow: inset 0px -16px 32px rgba(33, 34, 28, 0.05);
+  border-radius: 4px;
+  width: 313px;
+}

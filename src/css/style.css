@@ -5,14 +5,11 @@
 
 @import url("base/main.css");
 @import url("base/media.css");
-@import url("base/icons.css");
 
 @import url("layout/header.css");
 @import url("layout/footer.css");
 @import url("layout/form.css");
 @import url("layout/carousel.css");
-@import url("/src/css/layout/frise.css");
-@import url("/src/css/layout/404.css");
 
 @import url("components/menu.css");
 @import url("components/carousel.css");
