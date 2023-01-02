@@ -1,44 +1,68 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/style.css">  
-    <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
-        
-        <ul>
-          <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
-    <br> <br>
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
     <div class="info">
       <p class="bio"> Bonjour, je me présente, Atnan Tas en 1ère année dede MMI (Métier Multimédia Internet).</p> 
 

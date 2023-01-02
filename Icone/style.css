@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'icomoon';
+  
+  src:url('../../Codage\ Femme\ et\ mieux/i') format('truetype'),
+      url('fonts/icomoon.woff?7k6a4l') format('woff'),
+   
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon"], [class*=" icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconFacebook2:before {
+  content: "\ea91";
+}
+.iconInstagram:before {
+  content: "\ea92";
+}
+.iconLinkedin:before {
+  content: "\eac9";
+}
+.iconPinterest:before {
+  content: "\ead1";
+}

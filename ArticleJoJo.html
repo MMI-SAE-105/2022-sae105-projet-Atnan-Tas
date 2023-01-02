@@ -1,51 +1,79 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/style.css">  
-    <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
-        
-        <ul>
-          <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
 	<body>
 		<h1>JoJo's Bizarre Adventures</h1>
-		<p>JoJo’s Bizarre Adventure est un manga crée en 1988 par le célèbre auteur Hirohiko Araki. 
+
+		<hr class="hrgrand">
+
+		<p class="texte_article">JoJo’s Bizarre Adventure est un manga crée en 1988 par le célèbre auteur Hirohiko Araki. 
 		Elle se compose en 8 différentes parties, qui sont toutes différentes les unes des autres avec des protagonsites différents,
 		 mais toutes liés du début à la fin.</p>
 		 <img class="images" src="public/img/hirohiko_araki.webp">
-		 photographie de hirohiko araki
-		 <p>-	Partie 1 : Phantom Blood (Jonathan Joestar) <br>
+		 <p class="description">photographie de hirohiko araki</p>
+		 <p class="texte_article">-	Partie 1 : Phantom Blood (Jonathan Joestar) <br>
 			-	Partie 2: Battle Tendency (Joseph Joestar) <br>
 			-	Partie 3 : Stardust Crusaders (Jotaro Kujo) <br> 
 			-	Partie 4 : Diamond is Unbreakable (Josuke* Higashikata) <br>
@@ -57,125 +85,160 @@
 			*Le « Suke » dans Josuke peut se prononcer également « Jo »
 
 			</p>
-			<p>Prépublié dans un premier temps entre 1986 et 2004 dans le Weekly Shônen Jump (WSJ)
+			<p class="texte_article">Prépublié dans un premier temps entre 1986 et 2004 dans le Weekly Shônen Jump (WSJ)
 			 puis en 2005 dans le Ultra Jump, qui est un catalogue spécialisé dans les mangas 
 			 destiné à un public adulte.
 			</p>
 			<img class="images" src="public/img/wsj_jojo.webp">
-			Couverture d'un WSJ affichant Josuke
+			<p class="description">Couverture d'un WSJ affichant Josuke</p>
 
-			<p>Cette histoire extrêmement farfelue suit la vie et les aventures de la famille Joestar
+			<p class="texte_article">Cette histoire extrêmement farfelue suit la vie et les aventures de la famille Joestar
 				 sur plusieurs générations. Un seul ennemi est à la cause de tous ces évènements qui 
 				 tourmentent la famille Joestar, Dio Brando.</p>
 
-			<p>Ses actes ont un effet papillon absurde, passant de combat contre des vampires
+			<p class="texte_article">Ses actes ont un effet papillon absurde, passant de combat contre des vampires
 				 dans la partie 1 (Phantom Blood) et la partie 2 (Battle Tendency).</p>
-				 <p>A une traque contre un ennemi commun, avec un humour très absurde
+				 <p class="texte_article">A une traque contre un ennemi commun, avec un humour très absurde
 					 et des personnages musclés de manière aberrante dans la partie 3 (Stardust Crusaders).</p>
-					 <p>Qui suit avec une histoire avec un genre policier dans la partie 4 (Diamond is Unbreakable). </p>
-					 <p>Et un drame en plein milieu de la Mafia italienne dans la partie 5 (Golden Wind).</p>
+					 <p class="texte_article">Qui suit avec une histoire avec un genre policier dans la partie 4 (Diamond is Unbreakable). </p>
+					 <p class="texte_article">Et un drame en plein milieu de la Mafia italienne dans la partie 5 (Golden Wind).</p>
 
 			<img class="images" src="public//img/Joseph_wamuu.webp">
-			Joseph Joestar combattant un vampire.
+			<p class="description">Joseph Joestar combattant un vampire.</p>
 			<img class="images" src="public/img/jotaro_kira.webp">
-			Jotaro Kujo, venant de trouver et coincer un tueur en série.
+			<p class="description">Jotaro Kujo, venant de trouver et coincer un tueur en série.</p>
 			<img class="images" src="public/img/Giorno_boss.webp">
-			Giorno Giovanna, ayant finalement obtenu le poste de parrain de la mafia. <br> <br>
-			<p>JJBA (sigle de JoJo’s Bizarre Adventure) est l’un des mangas les plus vendu au monde avec plus de 100 millions de volume commercialisé presque partout dans le monde.
+			<p class="description">Giorno Giovanna, ayant finalement obtenu le poste de parrain de la mafia.</p> 
+			<p class="texte_article">JJBA (sigle de JoJo’s Bizarre Adventure) est l’un des mangas les plus vendu au monde avec plus de 100 millions de volume commercialisé presque partout dans le monde.
 
 				Ce succès leurs a permis de faire des collaborations avec pleins de marques, et surtout des marques de luxe.
 				
-				Parmi toutes les collaborations il y a : <br> <br>
-				-	Mercedes, qui ont créé une voiture avec une carrosserie. contenant des onomatopées japonaises qui sont unique à JoJo’s.
-				<img class="images" src="public/img/Mercedes_JoJo.webp">
-				-	Gucci, qui ont publiés dans les boutiques et postés sur les réseaux sociaux des personnages de JoJo’s avec des vêtements et accessoires Gucci.
-				<img class="images" src="public/img/Gucci_jojo.webp">
-				-	Balenciaga, un personnage de jojo vêtu de Balenciaga sur une couverture de catalogue Vogue « Uomo ».
-				<img class="images" src="public/img/Uomo_JoJo.webp">
-				-	Seiko, marque de montre de luxe qui ont créé une série de montre à l’effigie de JoJo’s. 
-				<img class="images" src="public/img/Seiko_JoJo.webp">
-				J’ai écris cet article, car quelque années auparavent, j’ai découvert pour la première fois cette oeuvre, 
-				je n’avais jamais lu une histoire aussi bien écrite, drôle, intrigante, attachante avec un système de pouvoir unique. <br> <br>
+				Parmi toutes les collaborations il y a : </p>
 
-J’aimerais donc vous partager quelque unes des planches de ce manga qui m’ont vraiment plu.	
+				<p class="description">-	Mercedes, qui ont créé une voiture avec une carrosserie. contenant des onomatopées japonaises qui sont unique à JoJo’s.</p>
+				<img class="images" src="public/img/Mercedes_JoJo.webp">
+				<p class="description">-	Gucci, qui ont publiés dans les boutiques et postés sur les réseaux sociaux des personnages de JoJo’s avec des vêtements et accessoires Gucci.</p>
+				<img class="images" src="public/img/Gucci_jojo.webp">
+				<p class="description">-	Balenciaga, un personnage de jojo vêtu de Balenciaga sur une couverture de catalogue Vogue « Uomo ».</p>
+				<img class="images" src="public/img/Uomo_JoJo.webp">
+				<p class="description">-	Seiko, marque de montre de luxe qui ont créé une série de montre à l’effigie de JoJo’s.</p> 
+				<img class="images" src="public/img/Seiko_JoJo.webp">
+				<p class="texte_article">J’ai écris cet article, car quelque années auparavent, j’ai découvert pour la première fois cette oeuvre, 
+				je n’avais jamais lu une histoire aussi bien écrite, drôle, intrigante, attachante avec un système de pouvoir unique.</p> 
+
+				<p class="texte_article">’aimerais donc vous partager quelque unes des planches de ce manga qui m’ont vraiment plu.</p>	
 				</p>
 				<img class="images" src="public/img/JoJo_Sbr_1.webp">
 				<img class="images" src="public/img/JoJo_sbr_2.webp">
 				<img class="images" src="public/img/JoJo_sbr_3.webp">
-				N’hésitez pas à lire d’autres articles ! <br> <br>
-
-
-	</body>
-	<div class="carrousel" x-data="{}">
-		<div class="carrousel_parent-ecrans">
-			<div id="ecran-1" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/FightClub_logo.webp" alt="image ecran 1">
-					<figcaption>Fight Club</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-2" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/Accor_arena.webp" alt="image ecran 2">
-					<figcaption>Accor Arena</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-3" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/Crypto.webp" alt="image ecran 3">
-					<figcaption>Web 3.0</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-4" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/addiction_ecran.webp" alt="image ecran 4">
-					<figcaption>Dangers des écrans</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-5" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
-					<figcaption>Vinland Saga</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-6" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/PnL.webp" alt="image ecran 5">
-					<figcaption>PNL</figcaption>
-				</figure>
-			</div>
-		</div>
-		
-	</div>
-		<br>
-		<footer class="footer">
-			<div class="textblanc">
-			<h3>Donnez votre avis !  </h3> 
-			<p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
-			<hr class="hr">
-			<h3>Mentions légales</h3>
-			<p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
-			<img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
-			<hr class="hr">
-			<h3>Me contacter</h3>
-			</div>
-			<div class="contact, textblanc"> Atnan Tas C2 <br>
-			atnan.tas68@gmail.com
-			</div>
-			<div class=reseauxsociaux>
-			
-			<div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
-			<img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
-			
-			<div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
-			<img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
-			
-			<div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
-			<img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
-			</div>	 
-			<br> <br>  
-			<hr class="hr"> <br> <br> <br>
-			</footer>
-		  </html>
-		
-	
+				<h2>N'hésitez pas à lire d'autres articles !</h2>
+                     <br>
+                     <section class="carousel">
+                         <ul class="carousel-items">
+                             
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">Fight Club</h2>
+                                     <img src="img/Caroussel/FightClub_logo.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleFC.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">AccorHotel Arena</h2>
+                                     <img src="img/Caroussel/Accor_arena.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleAA.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                                 <li class="carousel-item">
+                                   <div class="card">
+                                       <h2 class="card-title">Vinland Saga</h2>
+                                       <img src="img/Caroussel/thorfinn_2.webp" />
+                                       <div class="card-content">
+                                           <a href="ArticleVS.html" class="button__caroussel">En lire plus</a>
+                                       </div>
+                                   </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">Web 3.0</h2>
+                                     <img src="img/Caroussel/Crypto.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleWeb3.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">Les écrans et leurs dangers</h2>
+                                     <img src="img/Caroussel/addiction_ecran.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleEcran.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">PNL</h2>
+                                     <img src="img/Caroussel/PnL.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticlePNL.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             
+         
+                 </section>
+             </main>
+             
+         
+             <footer class="footer">
+         
+         
+                 <section class="footer__fond">
+         
+                     <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+                         <p class=footer__link__text>Formulaire de contact</p>
+                     </a>
+         
+                     <h3 class="footer__title">Mentions légales</h3>
+                     <address class=footer__link__text>
+                         <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                             <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                         </p>
+                     </address>
+         
+                     <h3 class="footer__title">Me contacter</h3>
+                     <address>
+                         <p class=footer__link__text>Atnan Tas C2 <br>
+                             <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                         </p>
+                     </address>
+                     
+                     <li class=reseaux__sociaux>
+         
+                         <div class="reseau__fb"><a href="https://www.facebook.com">
+                         <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+         
+                         <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                         <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                                     
+                        
+                         <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                         <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+                     </li>
+         
+                     <div class="trait__menu"></div>
+                     <ul class="langue">
+                         <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                         <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+                     </ul>
+                 </section>
+             </footer> 
+         
+         
+         </body>
+         </html>

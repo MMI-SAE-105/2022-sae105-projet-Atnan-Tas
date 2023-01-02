@@ -1,170 +1,230 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/style.css">  
-    <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
-        
-        <ul>
-          <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
     <body>
-      <div>
-      <p>Tarik et Nabil Andrieu, deux frères, nés respectivement le 26 décembre 1986 et le 25 avril 1989,
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+    <body>
+      <h1>PNL</h1>
+      <hr class="hrgrand">
+
+      <p class="texte_article">Tarik et Nabil Andrieu, deux frères, nés respectivement le 26 décembre 1986 et le 25 avril 1989,
          vivant anciennement dans la cité des Tarterêts à Corbeil-Essonnes,
           sont à l’origine de l’un des groupe de rap français le plus connu de France, PNL,
-           qui est le sigle de Peace N’ Lovés. <br> <br> 
-           Le groupe est assez mystérieux, faisant très peu d’apparition dans les réseaux,
+           qui est le sigle de Peace N’ Lovés.  </p>
+          <p class="texte_article"> Le groupe est assez mystérieux, faisant très peu d’apparition dans les réseaux,
             et avec une absence totale d’interview. La seule interview acceptée était celle de Planète Rap,
              où ils ont envoyé un singe, qui les « représente » car ils disent à plusieurs reprises dans
               leurs musiques qu’ils ont grandi dans la jungle.</p>
-              <br> <br>
+             
               <img class="images" src="public/img/Pnl_dd.webp">
-              <p>Image du clip “Au DD”.</p>
-            <br> <br>
-            <hr class="hrpage"> <br> <br> 
-            <p>Dès ses débuts en 2015, le groupe a tournés des clips un peu partout dans le monde,
-               Japon, Jamaïque, Islande, Etats-Unis, etc.. <br> <br>
+              <p class="description">Image du clip “Au DD”.</p>
+        
+            <hr class="hrpage">  
+            <p class="texte_article">Dès ses débuts en 2015, le groupe a tournés des clips un peu partout dans le monde,
+               Japon, Jamaïque, Islande, Etats-Unis, etc.. </p>
 
-              Le premier album du duo sort en 2015, « QLF » qui veut dire Que La Famille, 
-              dans la même année Le Monde Chico, suivie par Dans La Légende en 2016, en terminant avec Deux Frères en 2019. <br> <br>
+              <p class="texte_article">Le premier album du duo sort en 2015, « QLF » qui veut dire Que La Famille, 
+              dans la même année Le Monde Chico, suivie par Dans La Légende en 2016, en terminant avec Deux Frères en 2019. </p>
               
-              Le succès de ce groupe vient de leurs vies difficiles qu’ils nous transmettent à travers leurs musiques,
-               ce qui touche beaucoup d’auditeurs qui se retrouvent dans les paroles chantées. <br> <br>
+              <p class="texte_article">Le succès de ce groupe vient de leurs vies difficiles qu’ils nous transmettent à travers leurs musiques,
+               ce qui touche beaucoup d’auditeurs qui se retrouvent dans les paroles chantées.</p> 
               
-              L’album Deux Frères contient une musique nommée « La misère est si belle », 
+              <p class="texte_article">L’album Deux Frères contient une musique nommée « La misère est si belle », 
               la musique qui m’a le plus marquée de toutes leurs discographies.</p>
-              <br> <br>
               <img class="images" src="public/img/Pnl_Album.webp">
-              <p>Les albums du groupe.</p>
-              <br> <br>
+              <p class="description">Les albums du groupe.</p>
               <hr class="hrpage">
-              <br> <br>
-              <p>Les deux frères de Tarterêts se livrent encore une fois dans cette musique en commençant par 
+              <p  class="texte_article">Les deux frères de Tarterêts se livrent encore une fois dans cette musique en commençant par 
                 la phrase qui est devenue célèbre, « J’suis triste comme d’hab, F*ck ce n’est pas la peine de réfléchir »,
                  ce qui nous annonce que la musique ne sera pas joyeuse.</p>
 
-                <p >Ils nous font comprendre dans cette musique que quand ils étaient encore petits, la vie était très compliquée,
-                 et l’est encore maintenant qu’ils sont le plus grands groupe de France. <br> <br>
+                <p class="texte_article">Ils nous font comprendre dans cette musique que quand ils étaient encore petits, la vie était très compliquée,
+                 et l’est encore maintenant qu’ils sont le plus grands groupe de France. 
                  Le refrain répète à plusieurs reprise « La misère est si belle », ce qui veut dire qu’ils étaient beaucoup plus
                   heureux à l’époque dans la « misère » financière, que désormais couvert d’argent par les millions et millions 
                   d’auditeurs Fan du groupe.</p> 
-                  <hr class="hrpage"> <br> <br>
-                  <p>J’écoute ce groupe depuis 2014, j’ai assisté à leurs concert, 
+                  <hr class="hrpage"> 
+                  <p  class="texte_article">J’écoute ce groupe depuis 2014, j’ai assisté à leurs concert, 
                     et j’ai trouvé le dernier album marquant dû à son contenu, musique de tout genre, 
                     qualitative, ils nous transmettent des émotions à travers chacunes de leurs musique.
-                     C’est pourquoi j’ai écris cet article. <br> <br>
+                     C’est pourquoi j’ai écris cet article. 
 
-                    Je vous laisse cliquer sur l’image ci-dessous si vous voulez écouter cette musique. <br> <br>
+                    Je vous laisse cliquer sur l’image ci-dessous si vous voulez écouter cette musique. 
                     </p>
-                    <img src="public/img/PnlSpotify.webp" alt="lien spotify">
-                    <br> <br>
+                    <a href="https://open.spotify.com/track/1s3XtkdfT3obSCbQVWtvX9?si=0d62341601bb4010">
+                    <img class="images" src="public/img/PnlSpotify.webp" alt="lien spotify">
+                    </a>
                     <hr class="hrgrand">
-                    <br> <br>
+                   
                 </body>
-                <h2>Découvrez également d'autres articles ici !</h2>
-  <div class="carrousel" x-data="{}">
-    <div class="carrousel_parent-ecrans">
-      <div id="ecran-1" class="carrousel_ecran">
-        <a href="ArticleFC.html">
-        <figure>
-          <img src="public/img/FightClub_logo.webp" alt="image ecran 1">
-          <figcaption>Fight Club</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-3" class="carrousel_ecran">
-        <a href="ArticleWeb3.html">
-        <figure>
-          <img src="public/img/Crypto.webp" alt="image ecran 3">
-          <figcaption>Web 3.0</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-4" class="carrousel_ecran">
-        <a href="ArticleEcran.html">
-        <figure>
-          <img src="public/img/addiction_ecran.webp" alt="image ecran 4">
-          <figcaption>Dangers des écrans</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-5" class="carrousel_ecran">
-        <a href="ArticleVS.html">
-        <figure>
-          <img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
-          <figcaption>Vinland Saga</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-6" class="carrousel_ecran">
-        <a href="ArticlePNL.html">
-        <figure>
-          <img src="public/img/JoJo.webp" alt="image ecran 5">
-          <figcaption>JoJo's Bizarre Adventures</figcaption>
-        </figure>
-        </a>
-      </div>
-    </div>
+                <h2>N'hésitez pas à lire d'autres articles !</h2>
+                <br>
+                <section class="carousel">
+                    <ul class="carousel-items">
+                        
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Fight Club</h2>
+                                <img src="img/Caroussel/FightClub_logo.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleFC.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">JoJo's Bizzare Adventures</h2>
+                                <img src="img/Caroussel/JoJo.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleJoJo.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                            <li class="carousel-item">
+                              <div class="card">
+                                  <h2 class="card-title">Accorhotel Arena</h2>
+                                  <img src="img/Caroussel/Accor_arena.webp" />
+                                  <div class="card-content">
+                                      <a href="ArticleAA.html" class="button__caroussel">En lire plus</a>
+                                  </div>
+                              </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Web 3.0</h2>
+                                <img src="img/Caroussel/Crypto.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleWeb3.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Les écrans et leurs dangers</h2>
+                                <img src="img/Caroussel/addiction_ecran.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleEcran.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Vinland Saga</h2>
+                                <img src="img/Caroussel/thorfinn_2.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleVS.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        
     
-  </div>
-
-  <footer class="footer">
-    <div class="textblanc">
-    <h3>Donnez votre avis !  </h3> 
-    <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
-    <hr class="hr">
-    <h3>Mentions légales</h3>
-    <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
-    <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
-    <hr class="hr">
-    <h3>Me contacter</h3>
-    </div>
-    <div class="contact, textblanc"> Atnan Tas C2 <br>
-    atnan.tas68@gmail.com
-    </div>
-    <div class=reseauxsociaux>
+            </section>
+        </main>
+        
     
-    <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
-    <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
+        <footer class="footer">
     
-    <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
-    <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
     
-    <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
-    <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
-    </div>	 
-    <br> <br>  
-    <hr class="hr"> <br> <br> <br>
-    </footer>
-  </html>
+            <section class="footer__fond">
+    
+                <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+                    <p class=footer__link__text>Formulaire de contact</p>
+                </a>
+    
+                <h3 class="footer__title">Mentions légales</h3>
+                <address class=footer__link__text>
+                    <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                        <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                    </p>
+                </address>
+    
+                <h3 class="footer__title">Me contacter</h3>
+                <address>
+                    <p class=footer__link__text>Atnan Tas C2 <br>
+                        <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                    </p>
+                </address>
+                
+                <li class=reseaux__sociaux>
+    
+                    <div class="reseau__fb"><a href="https://www.facebook.com">
+                    <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+    
+                    <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                    <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                                
+                   
+                    <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                    <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+                </li>
+    
+                <div class="trait__menu"></div>
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+                </ul>
+            </section>
+        </footer> 
+    
+    
+    </body>
+    </html>

@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  header a {
+    text-decoration: none;
+  }
+
+  .header__logo__1{
+    margin-left: 20px;
+    margin-top: 40px;
+    width: 52px;
+    height: 40px;
+    z-index: 24;
+    position: relative;
+  }
+  
+  .header {
+    padding: 0 20px;
+    height: 243px;
+    display: flex;
+    background: url(../../../img/page_accueuil/Header.svg) no-repeat;
+    justify-content: space-between;
+    background-size: cover;
+    
+  }
+
+
+ 

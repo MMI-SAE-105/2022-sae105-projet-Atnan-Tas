@@ -1,71 +1,245 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/style.css">  
-    <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
-        
-        <ul>
-          <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
 
-    <footer class="footer">
-      <div class="textblanc">
-      <h3>Donnez votre avis !  </h3> 
-      <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
-      <hr class="hr">
-      <h3>Mentions légales</h3>
-      <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
-      <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
-      <hr class="hr">
-      <h3>Me contacter</h3>
-      </div>
-      <div class="contact, textblanc"> Atnan Tas C2 <br>
-      atnan.tas68@gmail.com
-      </div>
-      <div class=reseauxsociaux>
-      
-      <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
-      <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
-      
-      <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
-      <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
-      
-      <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
-      <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
-      </div>	 
-      <br> <br>  
-      <hr class="hr"> <br> <br> <br>
-      </footer>
-    </html>
-  
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+        <h1>Le danger des écrans</h1>
+        <hr class="hrgrand">
+        <p class="texte_article">Il existe différente génération de personnes, qui sont nés entre une date précise.
+        </p>
+
+        <p class="texte_article">Les baby-boomers, les personnes nés entre 1946 et 1964, pendant la période du baby-boom 
+          qui à suivit la 2nd guerre mondiale, où le taux de natalité était crucialement élevé.
+        </p>
+
+        <p class="texte_article">La génération X, nés entre 1965 et 1979, qui ont connu la crise pétrolière 
+          et la grande vague de chômage.
+        </p>
+
+        <p class="texte_article">La génération Y, ou Millenials, né entre 1980 et 1994, cette génération à connu 
+          le début d’internet et toutes sorte de technologie.
+        </p>
+
+        <p class="texte_article">La génération Z, né entre 1995 et 2009, un bon nombre d’entre nous,
+           elle est née et à grandi avec le numérique, c’est une génération ultra-connecté.
+        </p>
+
+        <p class="texte_article">Puis enfin la génération Alpha, ceux qui sont né en 2010 ou après, 
+          une génération très jeune, qui grandi avec les grands changements 
+          du monde et des écrans partout.
+        </p>
+
+        <img class="images" src="public/img/generation.webp">
+
+        <p class="texte_article">Pour les générations avant l’alpha, les écrans ne sont généralement 
+          pas un problème, ayant grandi avec nous en connaissons les avantages 
+          et les défauts.
+        </p>
+
+        <p class="texte_article">Cela n’empêche pas la dangerosité des écrans et du web, ayant des impacts 
+          négatifs sur le physique, psychologique ou même sur la vie sociale.
+        </p>
+
+        <p class="texte_article">Les écrans peuvent amener, si on en perd le contrôle, à une sédentarité et 
+          au surpoids, un manque de sommeil dont beaucoup d’entre nous souffrons, 
+          des douleurs dû à la posture du corps et aux troubles visuelles. 
+        </p>
+
+        <p class="texte_article">Ils sont également en cause d’une diminution du bienêtre, pouvant entrainer 
+          une baisse d’estime de soi (avec l’exemple des réseaux sociaux), une 
+          dépendance addictive au même titre que la cigarette, l’alcool 
+          ou bien la drogue.</p>
+
+          <img class="images" src="img/Caroussel_autres_projets/addiction_ecran.webp">
+
+          <p class="texte_article">Les impacts sur la vie sociale sont à prévoir aussi, entre isolement, 
+            baisse de résultat scolaire, difficulté de sociabilisation et des risques 
+            pour la sécurité de soi ou d’autrui.
+          </p>
+
+          <p class="texte_article">Toutes les générations souffrent des effets négatifs des écrans, mais le 
+            pire est à prévoir pour les futures générations, qui vont grandir avec un 
+            internet plus que dangereux et des écrans absolument partout. </p>
+
+            <p class="texte_article">Elles vont également grandir avec le futur web 3.0, un monde dont 
+              on a pour le moment que très peu d’information.</p>
+
+              <hr class="hrpage">
+
+              <p class="texte_article">J’ai écris cet article pour vous sensibiliser à cette cause et prendre
+                 soin des gens qui nous entourent, et protéger notre futur génération 
+                 de tout les méfaits des écrans et de la technologie.
+              </p>
+
+              <hr class="hrpage"> 
+           <h2>N'hésitez pas à lire d'autres articles !</h2>
+           <br>
+           <section class="carousel">
+               <ul class="carousel-items">
+                   
+                   <li class="carousel-item">
+                       <div class="card">
+                           <h2 class="card-title">Fight Club</h2>
+                           <img src="img/Caroussel/FightClub_logo.webp" />
+                           <div class="card-content">
+                               <a href="ArticleFC.html" class="button__caroussel">En lire plus</a>
+                           </div>
+                       </div>
+                   </li>
+                   <li class="carousel-item">
+                       <div class="card">
+                           <h2 class="card-title">JoJo's Bizzare Adventures</h2>
+                           <img src="img/Caroussel/JoJo.webp" />
+                           <div class="card-content">
+                               <a href="ArticleJoJo.html" class="button__caroussel">En lire plus</a>
+                           </div>
+                       </div>
+                       <li class="carousel-item">
+                         <div class="card">
+                             <h2 class="card-title">Accorhotel Arena</h2>
+                             <img src="img/Caroussel/Accor_arena.webp" />
+                             <div class="card-content">
+                                 <a href="ArticleAA.html" class="button__caroussel">En lire plus</a>
+                             </div>
+                         </div>
+                   </li>
+                   <li class="carousel-item">
+                       <div class="card">
+                           <h2 class="card-title">Web 3.0</h2>
+                           <img src="img/Caroussel/Crypto.webp" />
+                           <div class="card-content">
+                               <a href="ArticleWeb3.html" class="button__caroussel">En lire plus</a>
+                           </div>
+                       </div>
+                   </li>
+                   <li class="carousel-item">
+                       <div class="card">
+                           <h2 class="card-title">Les écrans et leurs dangers</h2>
+                           <img src="img/Caroussel/addiction_ecran.webp" />
+                           <div class="card-content">
+                               <a href="ArticleEcran.html" class="button__caroussel">En lire plus</a>
+                           </div>
+                       </div>
+                   </li>
+                   <li class="carousel-item">
+                       <div class="card">
+                           <h2 class="card-title">PNL</h2>
+                           <img src="img/Caroussel/PnL.webp" />
+                           <div class="card-content">
+                               <a href="ArticlePNL.html" class="button__caroussel">En lire plus</a>
+                           </div>
+                       </div>
+                   </li>
+                   
+
+       </section>
+   </main>
+   
+
+   <footer class="footer">
+
+
+       <section class="footer__fond">
+
+           <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+               <p class=footer__link__text>Formulaire de contact</p>
+           </a>
+
+           <h3 class="footer__title">Mentions légales</h3>
+           <address class=footer__link__text>
+               <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                   <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+               </p>
+           </address>
+
+           <h3 class="footer__title">Me contacter</h3>
+           <address>
+               <p class=footer__link__text>Atnan Tas C2 <br>
+                   <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+               </p>
+           </address>
+           
+           <li class=reseaux__sociaux>
+
+               <div class="reseau__fb"><a href="https://www.facebook.com">
+               <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+
+               <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+               <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                           
+              
+               <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+               <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+           </li>
+
+           <div class="trait__menu"></div>
+           <ul class="langue">
+               <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+               <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+           </ul>
+       </section>
+   </footer> 
+
+
+</body>
+</html>

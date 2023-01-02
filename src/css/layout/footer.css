@@ -1,0 +1,76 @@
+  .footer {
+    background: linear-gradient(var(--violet-principal), var(--violet-secondaire));
+    color: white;
+    padding: 0px var(--space3x);
+    
+  }
+
+  .footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    margin-left: 1;
+  }
+
+
+  
+ 
+  
+
+  h2 {
+     text-align: center;
+     font-size:x-large;
+     font-weight:600;
+     margin-top: 30px;
+  }
+
+  .footer__link__text {
+    text-decoration: underline;
+    font-family: 'Inter';
+    font-size:small;
+    text-align: left;
+    font-weight:normal;
+    margin-top: 10px;
+    color: white;
+    margin-left: 0px;
+  }
+  
+
+  .footer__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+ 
+
+  .reseaux__sociaux{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 45px;
+  }
+  .reseau__fb{
+    
+    margin: 10px;
+  }
+  .reseau__insta{
+    margin:10px;
+  }
+  .reseau__lin{
+    margin:10px
+  }
+  
+ 
+
+
+  .footer__fond{
+    justify-content: space-between;
+    background-size: cover;
+    display: block;
+    margin: -1px -25px;
+    padding: var(--space4x);
+  }
+
+  
+

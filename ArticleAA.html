@@ -1,161 +1,221 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/style.css">  
-    <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
-        
-        <ul>
-          <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
     <h1>Accorhotel Arena</h1>
 
-    <p>Le Palais omnisport de Paris-Bercy se situe sur le boulevard de Bercy,
-         dans le 12ème arrondissement de Paris, en face du ministère des Finances et de la Seine. <br> <br> 
+    <hr class="hrgrand">
 
-        Ce palais est connu pour sa grande polyvalence car il accueille toutes sortes d’évènement puisque la salle est entièrement modulable,
+    <p class="texte_article">Le Palais omnisport de Paris-Bercy se situe sur le boulevard de Bercy,
+         dans le 12ème arrondissement de Paris, en face du ministère des Finances et de la Seine.</p> 
+
+        <p class="texte_article">Ce palais est connu pour sa grande polyvalence car il accueille toutes sortes d’évènement puisque la salle est entièrement modulable,
          aussi bien des évènements musicaux, en faisant des concerts énormes avec les plus grands artistes français, 
          mais également du monde entier (avec l’exemple de Kanye West ou bien de Drake), 
          que sportives, en accueillant toutes sortes de compétition (tennis (Paris Rolex Master),
           voiles, rallye (Super Stock-Car anciennement), patinage artistique, E-sport 
-          (avec la Karmine Corp qui a crée l’un des plus grands évènements de l’histoire de l’E-sport, le KCX2). <br> <br></p>
+          (avec la Karmine Corp qui a crée l’un des plus grands évènements de l’histoire de l’E-sport, le KCX2).</p>
 
           <img class="images" src="public/img/KCX2.webp">
-          <p>Photo prise durant le KCX2</p>
-        <br> <br>
-        <hr class="hrpage"> <br> <br>
+          <p class="description">Photo prise durant le KCX2</p>
+        
+        <hr class="hrpage"> 
 
-        <p>Michel Andrault et Pierre Parat sont à l’œuvre de cet endroit et pleins d’autres endroits également (le centre Tolbiac, la tour Totem,
+        <p class="texte_article">Michel Andrault et Pierre Parat sont à l’œuvre de cet endroit et pleins d’autres endroits également (le centre Tolbiac, la tour Totem,
          l’ensemble de logements Les Coudriers), en créant un bâtiment a forme pyramidale composé de pelouse, vitre, métaux, béton. <br> <br></p>
          <img class="images" src="public/img/Michel_Andrault.webp">
-         <p>Photo de Michel Andrault <br> <br>
-            La charpente métallique a été réalisée par Jean Prouvé qui a également réalisé le Palais de la Porte Dorée, 
+         <p class="description">Photo de Michel Andrault</p> 
+           <p class="texte_article"> La charpente métallique a été réalisée par Jean Prouvé qui a également réalisé le Palais de la Porte Dorée, 
             l’école Boulle, le foyer de jeunes de Charonne, la résidence de l’ambassadeur du Japon,
              le siège de la Fédération nationale du Bâtiment, le 55 Grenelle.
              Elle est tenue par 4 piliers de béton de 30m chacun. Ce lieu est plus communément appelé le Bercy, 
              qui est un de ces nombreux noms. <br> <br>
              Il peut contenir jusqu’à 17000 personnes avec une superficie de +55000 m².
              </p>
-             <br> <br>
-             <hr class="hrpage"> <br> <br>
+            
+             <hr class="hrpage"> 
 
              <img class="images" src="public/img/Orelsan_AA.webp">
-             <p>L’artiste Orelsan en concert à l’Accord Arena</p>
+             <p class="description">L’artiste Orelsan en concert à l’Accord Arena</p>
 
-             <p>Le palais omnisport a été inauguré le 3 février 1984. Après 30 ans d’existence à accueillir le public,
+             <p class="texte_article">Le palais omnisport a été inauguré le 3 février 1984. Après 30 ans d’existence à accueillir le public,
                  un marché a été passé entre la mairie de Paris et le groupe hôtelier Accor pour une rénovation, 
-                 fermé jusqu’en 2015 le palais a réouvert sous le nom d’AccordHotels Arena. </p> <br> <br>
-                 <p>Le groupe leader mondiale de l’hôtellerie a donc reçu une publicité gigantesque, propriétaire de Mercure,
-                     Novotel, Formule 1, Ibis, Adagio, Sofitel, Pullman, etc... <br> <br>
+                 fermé jusqu’en 2015 le palais a réouvert sous le nom d’AccordHotels Arena. </p> 
+                 <p class="texte_article">Le groupe leader mondiale de l’hôtellerie a donc reçu une publicité gigantesque, propriétaire de Mercure,
+                     Novotel, Formule 1, Ibis, Adagio, Sofitel, Pullman, etc...</p>
 
-                    J’ai écris cet article sur ce lieu qui m’a marqué car j’y suis allé pour assister au plus beau concert de ma vie,
+                    <p class="texte_article">J’ai écris cet article sur ce lieu qui m’a marqué car j’y suis allé pour assister au plus beau concert de ma vie,
                      celui de l’artiste Orelsan</p>
-                    <br> <br>
-                     <hr class="hrpage"> <br> <br>
-
-                     N’hésitez pas à lire d’autres articles ! <br> <br>
-
-
-	</body>
-	<div class="carrousel" x-data="{}">
-		<div class="carrousel_parent-ecrans">
-			<div id="ecran-1" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/FightClub_logo.webp" alt="image ecran 1">
-					<figcaption>Fight Club</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-2" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/JoJo.webp" alt="image ecran 2">
-					<figcaption>JoJo's Bizarre Adventures</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-3" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/Crypto.webp" alt="image ecran 3">
-					<figcaption>Web 3.0</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-4" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/addiction_ecran.webp" alt="image ecran 4">
-					<figcaption>Dangers des écrans</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-5" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
-					<figcaption>Vinland Saga</figcaption>
-				</figure>
-			</div>
-			<div id="ecran-6" class="carrousel_ecran">
-				<figure>
-					<img src="public/img/PnL.webp" alt="image ecran 5">
-					<figcaption>PNL</figcaption>
-				</figure>
-			</div>
-		</div>
-		
-	</div>
-		<br>
-    <footer class="footer">
-      <div class="textblanc">
-      <h3>Donnez votre avis !  </h3> 
-      <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
-      <hr class="hr">
-      <h3>Mentions légales</h3>
-      <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
-      <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
-      <hr class="hr">
-      <h3>Me contacter</h3>
-      </div>
-      <div class="contact, textblanc"> Atnan Tas C2 <br>
-      atnan.tas68@gmail.com
-      </div>
-      <div class=reseauxsociaux>
-      
-      <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
-      <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
-      
-      <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
-      <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
-      
-      <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
-      <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
-      </div>	 
-      <br> <br>  
-      <hr class="hr"> <br> <br> <br>
-      </footer>
-    </html>
-  
+                     <hr class="hrpage"> 
+                     <h2>N'hésitez pas à lire d'autres articles !</h2>
+                     <br>
+                     <section class="carousel">
+                         <ul class="carousel-items">
+                             
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">Fight Club</h2>
+                                     <img src="img/Caroussel/FightClub_logo.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleFC.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">JoJo's Bizzare Adventures</h2>
+                                     <img src="img/Caroussel/JoJo.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleJoJo.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                                 <li class="carousel-item">
+                                   <div class="card">
+                                       <h2 class="card-title">Vinland Saga</h2>
+                                       <img src="img/Caroussel/thorfinn_2.webp" />
+                                       <div class="card-content">
+                                           <a href="ArticleVS.html" class="button__caroussel">En lire plus</a>
+                                       </div>
+                                   </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">Web 3.0</h2>
+                                     <img src="img/Caroussel/Crypto.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleWeb3.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">Les écrans et leurs dangers</h2>
+                                     <img src="img/Caroussel/addiction_ecran.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticleEcran.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li class="carousel-item">
+                                 <div class="card">
+                                     <h2 class="card-title">PNL</h2>
+                                     <img src="img/Caroussel/PnL.webp" />
+                                     <div class="card-content">
+                                         <a href="ArticlePNL.html" class="button__caroussel">En lire plus</a>
+                                     </div>
+                                 </div>
+                             </li>
+                             
+         
+                 </section>
+             </main>
+             
+         
+             <footer class="footer">
+         
+         
+                 <section class="footer__fond">
+         
+                     <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+                         <p class=footer__link__text>Formulaire de contact</p>
+                     </a>
+         
+                     <h3 class="footer__title">Mentions légales</h3>
+                     <address class=footer__link__text>
+                         <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                             <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                         </p>
+                     </address>
+         
+                     <h3 class="footer__title">Me contacter</h3>
+                     <address>
+                         <p class=footer__link__text>Atnan Tas C2 <br>
+                             <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                         </p>
+                     </address>
+                     
+                     <li class=reseaux__sociaux>
+         
+                         <div class="reseau__fb"><a href="https://www.facebook.com">
+                         <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+         
+                         <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                         <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                                     
+                        
+                         <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                         <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+                     </li>
+         
+                     <div class="trait__menu"></div>
+                     <ul class="langue">
+                         <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                         <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+                     </ul>
+                 </section>
+             </footer> 
+         
+         
+         </body>
+         </html>

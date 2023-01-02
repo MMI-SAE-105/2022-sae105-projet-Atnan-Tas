@@ -1,163 +1,216 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reboot</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
-    <link rel="stylesheet" href="src/css/style.css">  
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
     </head>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
     <body>
-    <header>  
-      <nav>
-    <div class="toggle">
-      <i class="fa-solid fa-bars ouvrir"></i>
-      <i class="fa-solid fa-xmark fermer"></i>
+        <header class="header" x-data="{ menuIsOpen : false }">
 
-    </div> 
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
 
-      
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+
+            
+
         
-        <ul class="menu">
-          <dl>
-            <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
-              <p class="menuarticle">Articles</p>
-            </dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
-              <li class="liste"><a class="liste" href="#">Accor Arena</a></li>
-              <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
-              <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
-              <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
-    <script src="app.js"></script>
+            
 
-       <p class="tag">
-          J'ai voulu présenter des élèments marquant de ma vie, en voilà une partie.
-        </p>
         
+            <p class="introduction__page__acceuil">J'ai voulu présenter des élèments marquant de ma vie, en voilà une partie.<br>
+            <br>
+            </p>
+                <a href="#AA">
+                <img class="arrow" src="img/design/arrow.jpg">
+                </a>
+                <article> 
+                    <a  href="ArticleAA.html">
+                        <h2 id="AA" class="titre__vignette" >Accor Arena</h2>
+                        <img  src="img/page_accueuil/Accor_arena.webp" alt="AA" class="img2">
+                    </a>
+
+                    <a  href="ArticleAA.html">
+                        <h3 class="sous__titre__vignette"> Apprenez-en plus au sujet de la plus grande salle d’évènement polyvalente de France.
+                        </h3>
+                    </a>
+                </article>
+                
+                <a href="ArticleAA.html">
+                    <input class="en__lire__plus" value="En lire +">
+                </a>
+
+                <br>
+                
+                <article>
+                    <a href="ArticleJoJo.html">
+                    <h2 class="titre__vignette">JoJo's Bizarre Adventure</h2>
+                    <img src="img/page_accueuil/JoJo.webp" alt="JoJo"></a>
+
+                    <a href="ArticleJoJo.html">
+                        <h3 class="sous__titre__vignette"> Découvrez les évènements autours de la famille Joestar.
+                        </h3>
+                    </a>
+                </article>
+                <a href="ArticleJoJo.html">
+                    <input class="en__lire__plus" value="En lire +">
+                </a>
+                    <br>
+                    <br>
+
+                <h2>Découvrez également d'autres articles ici !</h2>
+                <br>
+                <section class="carousel">
+                    <ul class="carousel-items">
+                        
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Fight Club</h2>
+                                <img src="img/Caroussel_autres_projets/FightClub_logo.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleFC.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Vinland Saga</h2>
+                                <img src="img/Caroussel_autres_projets/thorfinn_2.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleVS.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Web 3.0</h2>
+                                <img src="img/Caroussel_autres_projets/Crypto.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleWeb3.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Les écrans et leurs dangers</h2>
+                                <img src="img/Caroussel_autres_projets/addiction_ecran.webp" />
+                                <div class="card-content">
+                                    <a href="ArticleEcran.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">PNL</h2>
+                                <img src="img/Caroussel_autres_projets/PnL.webp" />
+                                <div class="card-content">
+                                    <a href="ArticlePNL.html" class="button__caroussel">En lire plus</a>
+                                </div>
+                            </div>
+                        </li>
+                        
+
+            </section>
+        </main>
         
-      
-       
-      
-  <!-- h2>lorem2^p>lorem -->
-    
-      <h2>Accor Arena</h2>
-  <div>
-      <img class="images" src="public/img/Accor_arena.webp" alt="Accor Arena">
-    </div>
-      <p class="tweet">
-        Apprenez-en plus au sujet de la plus grande salle d’évènement polyvalente de France.
-         </p>
-         <button class="more">          
-          en savoir +
-        </button>
-     
-    
-    <!-- h2>h2 {JoJo's Bizarre adventures} -->
-      <h2>JoJo's Bizarre Adventures</h2>
-      <a href="ArticleJoJo.html">
-        <img class="images" src="public/img/JoJo.webp" alt="JoJo">
-      </a>
 
-          <p class="tweet">
-      Découvrez les évènements autours de la famille Joestar.
-    </p>
-      <button class="more">           en savoir +
+        <footer class="footer">
 
-      </button>
-    
-  <h2 class="titrecarrousel">Découvrez également d'autres articles ici !</h2>
-  <div class="carrousel" x-data="{}">
-    <div class="carrousel_parent-ecrans">
-      <div id="ecran-1" class="carrousel_ecran">
-        <a href="ArticleFC.html">
-        <figure>
-          <img src="public/img/FightClub_logo.webp" alt="image ecran 1">
-          <figcaption>Fight Club</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-3" class="carrousel_ecran">
-        <a href="ArticleWeb3.html">
-        <figure>
-          <img src="public/img/Crypto.webp" alt="image ecran 3">
-          <figcaption>Web 3.0</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-4" class="carrousel_ecran">
-        <a href="ArticleEcran.html">
-        <figure>
-          <img src="public/img/addiction_ecran.webp" alt="image ecran 4">
-          <figcaption>Dangers des écrans</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-5" class="carrousel_ecran">
-        <a href="ArticleVS.html">
-        <figure>
-          <img src="public/img/Thorfinn_2.webp" alt="image ecran 5">
-          <figcaption>Vinland Saga</figcaption>
-        </figure>
-        </a>
-      </div>
-      <div id="ecran-6" class="carrousel_ecran">
-        <a href="ArticlePNL.html">
-        <figure>
-          <img src="public/img/PnL.webp" alt="image ecran 5">
-          <figcaption>PNL</figcaption>
-        </figure>
-        </a>
-      </div>
-    </div>
-    
-  </div>
 
-  <footer class="footer">
-    <div class="textblanc"> <br>
-    <h3>Donnez votre avis !  </h3> 
-    <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
-    <br>
-    <hr class="hr">
-    <br>
-    <h3>Mentions légales</h3>
-    <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p> <br>
-    <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
-    <br>
-    <hr class="hr">
-    <br>
-    <h3>Me contacter</h3>
-    </div>
-    <div class="contact textblanc"> Atnan Tas C2 <br>
-    </div>
-     <p class="contact textblanc"> atnan.tas68@gmail.com</p>
+            <section class="footer__fond">
+
+                <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+                    <p class=footer__link__text>Formulaire de contact</p>
+                </a>
     
-    <div class=reseauxsociaux>
-    
-    <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
-    <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
-    
-    <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
-    <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
-    
-    <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
-    <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
-    </div>	 
-    <br> <br>  
-    <hr class="hr"> <br> <br> <br>
-    </footer>
-  </body>
-  </html>
+                <h3 class="footer__title">Mentions légales</h3>
+                <address class=footer__link__text>
+                    <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                        <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                    </p>
+                </address>
+
+                <h3 class="footer__title">Me contacter</h3>
+                <address>
+                    <p class=footer__link__text>Atnan Tas C2 <br>
+                        <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                    </p>
+                </address>
+                
+                <li class=reseaux__sociaux>
+
+                    <div class="reseau__fb"><a href="https://www.facebook.com">
+                    <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+
+                    <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                    <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                                
+                   
+                    <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                    <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+                </li>
+
+                <div class="trait__menu"></div>
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+                </ul>
+            </section>
+        </footer> 
+
+
+    </body>
+</html>

@@ -1,173 +1,233 @@
 <!DOCTYPE html>
-<html class="Fond" lang="en" x-data="{articleOpen: false, menuIsOpen: false}"  :class="{noscroll:menuIsOpen,}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test menu</title>
-    <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/style.css">  
-    <header>  
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen"
-      class="menu-btn"
-      >   
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Femme et mieux">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
 
-      <img src="public/img/icone_menu.svg">
-    </button>  
-    
-     <a href="index.html">  
-      <img class="Reboot" src="public/img/Logo_site.svg" alt="logo du site">
-     </a>
-    <img class="header" src="public/img/Header.svg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 
-      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms
-      class="menu"
-      >
-        
-        <ul>
-          <dl>
-            <dt aria-controls="dd1" @click="articleOpen = ! articleOpen">Articles</dt>
-            <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms><li><a href="#">Accor Arena</a></li>
-              <li><a href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
-              <li><a href="ArticleFC.html">Fight Club</a></li>
-              <li><a href="ArticlePNL.html">La misère est si belle - PNL</a></li>
-              <li><a href="ArticleVS.html">Vinland Saga</a></li>
-              <li><a href="ArticleEcran.html">Dangers des écrans</a></li>
-              <li><a href="ArticleWeb3.html">Web 3.0</a></li></dd>
-          
-        </ul>
-      </nav>
-    </header>
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
 
-<h1 class="titrepage">Vinland Saga</h1>
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
 
-<p>Vinland saga, un manga historique qui a fait sa place parmi les plus grands en très peu de temps. <br> <br> 
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
 
-  Crée en 2005 par l’auteur Makoto Yukimura, son œuvre a été prépubliée dans le Weekly Shônen Magazine. <br> <br> 
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+
+<h1>Vinland Saga</h1>
+
+<hr class="hrgrand">
+
+<p class="texte_article">Vinland saga, un manga historique qui a fait sa place parmi les plus grands en très peu de temps. 
+
+ <p class="texte_article"> Crée en 2005 par l’auteur Makoto Yukimura, son œuvre a été prépubliée dans le Weekly Shônen Magazine. </p>
   
-  Ce manga se démarque des autres car il ne contient pas de pouvoir, assez enfantin, mais une histoire réelle retranscrit en BD japonaise puis animé par WIT Studio sur nos écrans. <br> <br>
+ <p class="texte_article">Ce manga se démarque des autres car il ne contient pas de pouvoir, assez enfantin, mais une histoire réelle retranscrit en BD japonaise puis animé par WIT Studio sur nos écrans. <br> <br>
   </p>
 
   <img class="images" src="public/img/Vinland_Yukimura.webp">
-  <p>photographie de Makoto Yukimura</p>
-  <br>
-  <hr class="hrpage">
-  <br>
-  <p>L’auteur a mêlé des événements historiques avec pas mal d’éléments fictifs,
-     Vinland saga raconte la vie d’un jeune islandais à la vie paisible avec sa famille, son nom, 
-     Thorfinn Karlsefni fils de Thors, qui historiquement est un réel explorateur autours des années 1000.
-    <br> <br>
+  <p class="description">photographie de Makoto Yukimura</p>
   
-    Il a une forte envie d’exploration après qu’un ancien du village lui raconta l’histoire du Vinland, 
+  <hr class="hrpage">
+  
+  <p class="texte_article">L’auteur a mêlé des événements historiques avec pas mal d’éléments fictifs,
+     Vinland saga raconte la vie d’un jeune islandais à la vie paisible avec sa famille, son nom, 
+     Thorfinn Karlsefni fils de Thors, qui historiquement est un réel explorateur autours des années 1000.</p>
+    
+  
+    <p class="texte_article">Il a une forte envie d’exploration après qu’un ancien du village lui raconta l’histoire du Vinland, 
     une terre où il fait chaud et avec une terre abondante qui permet de cultiver des légumes qui ne sont jamais vu en Islande, 
     ce vieil homme s’appelle Leif, qui représente Leif Erikson, 
     un explorateur islandais qui a réellement découvert une telle terre il y a 1000 ans de ça.</p>
 
     <img class="images" src="public/img/Vinland_leif.webp">
-    <p>Thorfinn (enfant) et le vieux Leif</p>
+    <p class="description">Thorfinn (enfant) et le vieux Leif</p>
 
-    <p> Notre protagoniste verra sa vie paisible basculer du jour au lendemain quand son père Thors, 
-      le plus fort des guerriers qui s’est repenti se fera exécuter par des pirates à qui on a offert une belle somme pour cela.
-      Le capitaine de ce groupe de pirate est Askeladd, un puissant combattant et très rusé. En soif de vengence, 
+    <p class="texte_article"> Notre protagoniste verra sa vie paisible basculer du jour au lendemain quand son père Thors, 
+      le plus fort des guerriers qui s’est repenti se fera exécuter par des pirates à qui on a offert une belle somme pour cela.</p>
+      
+      <p class="texte_article">Le capitaine de ce groupe de pirate est Askeladd, un puissant combattant et très rusé. En soif de vengence, 
       Thorfinn suivra puis intégrera cette bande, avec comme seul but, combattre Askeladd dans un duel a la loyal
        et le tuer pour se libérer de cette haine qui le hante. </p>
 
        <img class="images" src="public/img/thorfinn_3.webp">
-       <p>Duel à la loyal entre Askeladd et Thorfinn</p>
-        <br> 
+       <p class="description">Duel à la loyal entre Askeladd et Thorfinn</p>
        <hr class="hrpage">
-        <br>
 
-        <p>Vinland Saga compte déjà 25 volumes et son succès lui a permis de faire une collaboration qui n’est pas des moindres, 
-          avec la célèbre série de jeux vidéo Assassin’s Creed, ici Valhalla, qui est un jeu où l’on incarne un personnage Viking. <br> <br>
+        <p class="texte_article">Vinland Saga compte déjà 25 volumes et son succès lui a permis de faire une collaboration qui n’est pas des moindres, 
+          avec la célèbre série de jeux vidéo Assassin’s Creed, ici Valhalla, qui est un jeu où l’on incarne un personnage Viking.</p>
 
-          Dans le cadre de cette collaboration, l’auteur du manga a crée un One-Shot, qui est une histoire racontée en 1 seul chapitre.</p>
+          <p class="texte_article">Dans le cadre de cette collaboration, l’auteur du manga a crée un One-Shot, qui est une histoire racontée en 1 seul chapitre.</p>
           <img class="images" src="public/img/Vinland_Ac.webp">
           <p>Extrait du One Shot Vinland saga X Assassin’s Creed</p>
-          <br> <br>
-          <p>J’ai choisi de vous écrire cet article parce que c’est une œuvre qui m’a marqué, et j’aimerais vous partager un extrait d’un homme religieux :
-            « L’amour définit la valeur de toute chose, sans l’amour, l’or, l’argent, les chevaux, les belles femmes… Tout est sans valeurs » 
+         
+          <p class="texte_article">J’ai choisi de vous écrire cet article parce que c’est une œuvre qui m’a marqué, et j’aimerais vous partager un extrait d’un homme religieux :
+             « L’amour définit la valeur de toute chose, sans l’amour, l’or, l’argent, les chevaux, les belles femmes… Tout est sans valeurs » 
             </p>
             <img class="images" src="public/img/Vinland_moine.webp"> <br> <br>
-            <p>Je vais finir cet article avec plusieurs extrait de ce manga que j’ai beaucoup aimé.</p>
+            <p class="texte_article">Je vais finir cet article avec plusieurs extrait de ce manga que j’ai beaucoup aimé.</p>
             <img class="images" src="public/img/thorfinn_4.webp"> <br> <br>
             <img class="images" src="public/img/Thorfinn_1.webp"> <br> <br>
             <img class="images" src="public/img/vinland_askeladd.webp"> <br> <br>
             <hr class="hrpage"> <br> <br>
-            <p>N'hésitez pas à lire d'autres articles !</p>
-    <div class="carrousel" x-data="{}">
-      <div class="carrousel_parent-ecrans">
-        <div id="ecran-1" class="carrousel_ecran">
-          <a href="ArticleFC.html">
-          <figure>
-            <img src="public/img/FightClub_logo.webp" alt="image ecran 1">
-            <figcaption>Fight Club</figcaption>
-          </figure>
-          </a>
-        </div>
-        <div id="ecran-3" class="carrousel_ecran">
-          <a href="ArticleWeb3.html">
-          <figure>
-            <img src="public/img/Crypto.webp" alt="image ecran 3">
-            <figcaption>Web 3.0</figcaption>
-          </figure>
-          </a>
-        </div>
-        <div id="ecran-4" class="carrousel_ecran">
-          <a href="ArticleEcran.html">
-          <figure>
-            <img src="public/img/addiction_ecran.webp" alt="image ecran 4">
-            <figcaption>Dangers des écrans</figcaption>
-          </figure>
-          </a>
-        </div>
-        <div id="ecran-5" class="carrousel_ecran">
-          <a href="ArticleJoJo.html">
-          <figure>
-            <img src="public/img/JoJo.webp" alt="image ecran 5">
-            <figcaption>JoJo's Bizarre Adventures</figcaption>
-          </figure>
-          </a>
-        </div>
-        <div id="ecran-6" class="carrousel_ecran">
-          <a href="ArticlePNL.html">
-          <figure>
-            <img src="public/img/PnL.webp" alt="image ecran 5">
-            <figcaption>PNL</figcaption>
-          </figure>
-          </a>
-        </div>
-      </div>
-      
-    </div>
+            <h2>N'hésitez pas à lire d'autres articles !</h2>
+            <br>
+            <section class="carousel">
+                <ul class="carousel-items">
+                    
+                    <li class="carousel-item">
+                        <div class="card">
+                            <h2 class="card-title">Fight Club</h2>
+                            <img src="img/Caroussel/FightClub_logo.webp" />
+                            <div class="card-content">
+                                <a href="ArticleFC.html" class="button__caroussel">En lire plus</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="card">
+                            <h2 class="card-title">JoJo's Bizzare Adventures</h2>
+                            <img src="img/Caroussel/JoJo.webp" />
+                            <div class="card-content">
+                                <a href="ArticleJoJo.html" class="button__caroussel">En lire plus</a>
+                            </div>
+                        </div>
+                        <li class="carousel-item">
+                          <div class="card">
+                              <h2 class="card-title">Accorhotel Arena</h2>
+                              <img src="img/Caroussel/Accor_arena.webp" />
+                              <div class="card-content">
+                                  <a href="ArticleAA.html" class="button__caroussel">En lire plus</a>
+                              </div>
+                          </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="card">
+                            <h2 class="card-title">Web 3.0</h2>
+                            <img src="img/Caroussel/Crypto.webp" />
+                            <div class="card-content">
+                                <a href="ArticleWeb3.html" class="button__caroussel">En lire plus</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="card">
+                            <h2 class="card-title">Les écrans et leurs dangers</h2>
+                            <img src="img/Caroussel/addiction_ecran.webp" />
+                            <div class="card-content">
+                                <a href="ArticleEcran.html" class="button__caroussel">En lire plus</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-item">
+                        <div class="card">
+                            <h2 class="card-title">PNL</h2>
+                            <img src="img/Caroussel/PnL.webp" />
+                            <div class="card-content">
+                                <a href="ArticlePNL.html" class="button__caroussel">En lire plus</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+
+        </section>
+    </main>
     
+
     <footer class="footer">
-      <div class="textblanc">
-      <h3>Donnez votre avis !  </h3> 
-      <p><a class="textblanc" href="Contact.html">formulaire de contact</a></p>
-      <hr class="hr">
-      <h3>Mentions légales</h3>
-      <p>Projet réalisé dans le cadre d'un exercice pédagogique  au département MMI de l'IUT Nord Franche-comté</p>
-      <img class="logo" src="public/img/Logo_mmi.svg" alt="logo_mmi">
-      <hr class="hr">
-      <h3>Me contacter</h3>
-      </div>
-      <div class="contact, textblanc"> Atnan Tas C2 <br>
-      atnan.tas68@gmail.com
-      </div>
-      <div class=reseauxsociaux>
-      
-      <div class="reseaufb"><a href="https://www.facebook.com/Loris.Saturni%22%3E">
-      <img src="public/img/facebook_logo.svg" alt="IconFacebook"></a></div>
-      
-      <div class="reseauinsta"><a href="https://www.instagram.com/loris_saturni_/%22%3E">
-      <img src="public/img/Insta_logo.svg" alt="IconInstragram"></a></div>
-      
-      <div class="reseautwi"><a href="https://pin.it/3Ky0pzi%22%3E">
-      <img src="public/img/Twitter_Logo.svg" alt="IconPinterest"></a></div>
-      </div>	 
-      <br> <br>  
-      <hr class="hr"> <br> <br> <br>
-      </footer>
-    </html>
-  
+
+
+        <section class="footer__fond">
+
+            <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+                <p class=footer__link__text>Formulaire de contact</p>
+            </a>
+
+            <h3 class="footer__title">Mentions légales</h3>
+            <address class=footer__link__text>
+                <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                    <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                </p>
+            </address>
+
+            <h3 class="footer__title">Me contacter</h3>
+            <address>
+                <p class=footer__link__text>Atnan Tas C2 <br>
+                    <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                </p>
+            </address>
+            
+            <li class=reseaux__sociaux>
+
+                <div class="reseau__fb"><a href="https://www.facebook.com">
+                <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+
+                <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                            
+               
+                <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+            </li>
+
+            <div class="trait__menu"></div>
+            <ul class="langue">
+                <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+            </ul>
+        </section>
+    </footer> 
+
+
+</body>
+</html>
