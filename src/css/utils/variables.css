@@ -5,26 +5,7 @@
 --violet-principal: #8024CF;
 --violet-secondaire: #30144B;
 
-    /* Text-size styles */
-    /* base size: texte-article (16px) */
---texte-article: 1rem;
---titre-page: 30px;
---texte-si-vous-aimez-dautres-articles: 1.06rem;
---intro-page-accueil: 1.31rem;
---titre-vignette: 0.81rem;
---sous-titre-vignette: 0.88rem;
---titre-des-articles: 1.56rem;
---image-sous-titres: 0.75rem;
---a-propos-de-moi-titre: 1.31rem;
---open-sans-texte: 1.75rem;
---open-sans-titre: 1.75rem;
---introduction--header: 0.94rem;
---sous-titre-autres-projets: 1.06rem;
     
-  
-    /* Font-family styles */
-    --font-mono: 'PT+Sans', sans-serif;
-    --font-sans-serif: 'Open-Sans', sans-serif;
   
     /* Espaces */
     --space1x: 8px;

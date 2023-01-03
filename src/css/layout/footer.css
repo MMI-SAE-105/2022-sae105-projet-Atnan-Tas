@@ -1,5 +1,5 @@
   .footer {
-    background: linear-gradient(var(--violet-principal), var(--violet-secondaire));
+    background: linear-gradient(to bottom right, var(--violet-principal), var(--violet-secondaire));
     color: white;
     padding: 0px var(--space3x);
     
