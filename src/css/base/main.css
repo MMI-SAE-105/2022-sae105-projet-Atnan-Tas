@@ -225,3 +225,10 @@ button {
       padding-right: 10px;
       padding-top: 30px;
     }
+
+    h3 {
+      font-family: 'inter';
+      font-weight: normal;
+      margin-top: 40px;
+      margin-left: 10px;
+    }
