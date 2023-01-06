@@ -33,7 +33,7 @@ h1, h2{
 }
 
 h1 {
-  font-size: var(--titre-page);
+  font-size: 30px;
   font-family: 'Inter', sans-serif;
   font-weight: bold;
 }
