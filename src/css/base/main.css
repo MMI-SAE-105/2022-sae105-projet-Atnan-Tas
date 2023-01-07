@@ -232,3 +232,19 @@ button {
       margin-top: 40px;
       margin-left: 10px;
     }
+
+    .titre_AP {
+      font-size: 22px;
+      font-family: 'inter';
+      margin-left: 20px;
+      margin-top: 50px;
+      position: absolute;
+    }
+
+    .hrAP {
+    margin: 0 auto;
+    width: 350px;
+    height: 1px;
+    background-color: black;
+    margin-top: 80px;
+    }
