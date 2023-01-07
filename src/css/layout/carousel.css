@@ -84,3 +84,13 @@
     flex: 1 0 260px;
     scroll-snap-align: start;
 }
+
+.titrefilmo {
+    font-size: 25px;
+    font-family: 'viga';
+  }
+
+  .descrition_filmo {
+    font-size: 10px;
+    font-family: 'inter';
+  }
