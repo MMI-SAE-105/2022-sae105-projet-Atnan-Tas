@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reboot">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="index_english.html">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA_en.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo_en.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC_en.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL_en.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS_en.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran_en.html">Dangers of screens</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3_en.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet_en.html">Other project</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos_en.html">Read more</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact_en.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+        <div class="info">
+            <p class="bio"> Hello, I am Atnan Tas in 1st year of MMI (Métier Multimédia Internet in french). 
+                <br> 
+                I am passionate about the internet, so creating a website is an opportunity for me to learn more about this environment.
+                <br>
+                This site is dedicated to my future self, I hope he passes through here. 
+                      
+                So I'll let you enjoy my website.</p>.
+            </div>
+      <br> <br>
+      <hr class="hrpage">
+      <br> <br>
+      <h1 class="titrepage">Contact</h1>
+      <br> <br>
+      <hr class="hrgrand">
+      <br> <br>
+          <form class="formulaire" action="#">
+            <div>
+                <label class="texte_contacte" for="Prénom">First name</label><br>
+                <br><input class="rectangle_contacte" type="text" name="Prénom" id="Prénom">
+              </div>
+            
+             <br> <div>
+                <label class="texte_contacte" for="Nom">Last name</label><br>
+                <br><input class="rectangle_contacte" type="text" name="Nom" id="Nom">
+              </div>
+            
+             <br> <div>
+                <label class="texte_contacte" for="E-mail">E-mail</label><br>
+                <br><input class="rectangle_contacte" type="text" name="E-mail" id="E-mail">
+              </div>
+            
+            <br> <div>
+                <label class="texte_contacte" for="message">Message</label><br>
+                <br><textarea class="rectangle_contacte" rows="5" name="message" id="message"></textarea>
+              </div>
+            
+            <br><button class="bouton_contacte_envoyer" type="Envoyer">Send</button>
+            
+            </form>
+            </head>
