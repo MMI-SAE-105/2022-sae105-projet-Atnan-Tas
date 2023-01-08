@@ -1,5 +1,7 @@
 - NOM : Tas
 - PRÉNOM : Atnan
+- Groupe : C2
+- URL repository : https://github.com/MMI-SAE-105/2022-sae105-projet-Atnan-Tas
 - URL du site : https://reboot.atnantas.fr/
 - URL FIGMA : https://www.figma.com/file/IPAxYtjGL1gltkiickE3qe/Maquette-Projet-S1?node-id=171%3A2199&t=nI0mGfCnk90OkUs5-1
 # Structure de départ pour le projet individuel.
