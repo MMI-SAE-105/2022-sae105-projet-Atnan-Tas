@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reboot">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="index_english.html">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA_en.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo_en.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC_en.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL_en.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS_en.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran_en.html">Dangers of screens</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3_en.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet_en.html">Other project</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos_en.html">Read more</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact_en.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+        <h1>Read more</h1>
+        <hr class="hrgrand">  
+
+        <p class="texte_article">Want to know more about the articles? You are at the right place.
+            Discover David Flincher's filmography, the frieze or the glossary.</p>
+
+          <hr class="hrpage">
+
+          <p class="titre_AP">filmography</p>
+          <hr class="hrgrand"> <br>
+          <section class="carousel">
+              <ul class="carousel-items">
+                  
+                  <li class="carousel-item">
+                      <div class="card">
+                          <h2 class="titrefilmo">Gone Girl</h2>
+                          <img src="img/Caroussel/gone girl.jpg" />
+                          <div class="card-content">
+                            <p>A film adaptation of the American best seller </p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="carousel-item">
+                    <div class="card">
+                        <h2 class="titrefilmo">Alien 3</h2>
+                        <img src="img/Caroussel/alien3.jpg" />
+                        <div class="card-content">
+                          <p>A science fiction movie </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item">
+                  <div class="card">
+                      <h2 class="titrefilmo">Seven</h2>
+                      <img src="img/Caroussel/seven.jpg" />
+                      <div class="card-content">
+                        <p>A psychological thriller</p>
+                      </div>
+                  </div>
+              </li>
+                  <li class="carousel-item">
+                      <div class="card">
+                          <h2 class="titrefilmo">The Game</h2>
+                          <img src="img/Caroussel/thegame.jpg" />
+                          <div class="card-content">
+                            <p>A thriller</p>
+                          </div>
+                      </div>
+                      <li class="carousel-item">
+                        <div class="card">
+                            <h2 class="titrefilmo">Panic Room</h2>
+                            <img src="img/Caroussel/panicroom.jpg" />
+                            <div class="card-content">
+                              <p>A thriller</p>
+                            </div>
+                        </div>
+                  </li>
+                  <li class="carousel-item">
+                      <div class="card">
+                          <h2 class="titrefilmo">Zodiac</h2>
+                          <img src="img/Caroussel/zodiac.jpg" />
+                          <div class="card-content">
+                            <p>A detective thriller</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="carousel-item">
+                      <div class="card">
+                          <h2 class="titrefilmo">The Social Network</h2>
+                          <img src="img/Caroussel/thesocialnetwork.jpg" />
+                          <div class="card-content">
+                            <p>A biographical drama</p>
+                          </div>
+                      </div>
+                  </li>
+                 
+      </section>
+  </main>
+
+  <hr class="hrpage">
+
+  <p class="titre_AP">Frise</p>
+  <hr class="hrgrand">
+
+  <img class="images" src="public/img/frise.jpeg">
+  
+  <hr class="hrpage">
+
+  <p class="titre_AP">Micro-trottoir</p>
+  <hr class="hrgrand">
+  <video width="320" height="240" controls src="https://medias.atnantas.fr/sae_PAD_english_Noah_Ripert_Atnan_Tas_Maxime_Ruchet_1.mp4">
+  </video>
+
+  <hr class="hrpage">
+
+  <p class="titre_AP">Glossary</p>
+  <hr class="hrgrand">
+
+  <img class="images" src="public/img/Glossaire_anglais.jpeg">
+  
+    <hr class="hrgrand">
+
+    <footer class="footer">
+
+
+        <section class="footer__fond">
+
+            <a href="Contact_en.html"><h3 class="footer__title">Give your opinion!</h3>
+                <p class=footer__link__text>Contact form</p>
+            </a>
+
+            <h3 class="footer__title">Legal information</h3>
+            <address class=footer__link__text>
+                <p class=footer__link__text> Project realized for a pedagogical exercise in the department
+                    
+                    <a href="http://mmimontbeliard.com/">MMI department of Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                </p>
+            </address>
+
+            <h3 class="footer__title">Contact me</h3>
+            <address>
+                <p class=footer__link__text>Atnan Tas C2 <br>
+                    <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                </p>
+            </address>
+            
+            <li class=reseaux__sociaux>
+
+                <div class="reseau__fb"><a href="https://www.facebook.com">
+                <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+
+                <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                            
+               
+                <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+            </li>
+
+            <div class="trait__menu"></div>
+            <ul class="langue">
+                <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+            </ul>
+        </section>
+    </footer> 
+
+
+</body>
+</html>

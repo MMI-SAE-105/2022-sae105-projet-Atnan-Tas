@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reboot">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="index_english.html">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA_en.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo_en.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC_en.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL_en.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS_en.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran_en.html">Dangers of screens</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3_en.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet_en.html">Other project</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos_en.html">Read more</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact_en.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>You liked my website? Here are some more!</h2>
+
+        <h3>The sites of my friends are all equally interesting.
+            <br>I recommend you to have a look at them!</h3>       
+                <section class="carousel">
+                    <ul class="carousel-items">
+                        
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Past Life</h2>
+                                <h2 class="card-title">Kubilay Yardimli</h2>
+                                <img src="img/Caroussel/siteKubilay.webp" />
+                                <div class="card-content">
+                                    <a href="https://pastlife.kubilayyardimli.fr/" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Trav-All  </h2>
+                                <h2 class="card-title">Enes Tavukcu</h2>
+
+                                <img src="img/Caroussel/siteEnes.webp" />
+                                <div class="card-content">
+                                    <a href="http://travall.enestavukcu.fr/" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Génocide caché</h2>
+                                <h2 class="card-title">Oliventhan Thamilselvan</h2>
+                                <img src="img/Caroussel/siteOli.jpg" />
+                                <div class="card-content">
+                                    <a href="http://genocide-cache.thamilselvan.fr/" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">La guerre</h2>
+                                <h2 class="card-title">Youssef Wali</h2>
+                                <img src="img/Caroussel/siteYoussef.png" />
+                                <div class="card-content">
+                                    <a href="" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Memories</h2>
+                                <h2 class="card-title">Angelo Simoes</h2>
+                                <img src="img/Caroussel/siteAngelo.png" />
+                                <div class="card-content">
+                                    <a href="https://memories.angelo-simoes.fr" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Ne M'oublie Pas</h2>
+                                <h2 class="card-title">Samanth Saffeche</h2>
+                                <img src="img/Caroussel/siteSamantha.webp" />
+                                <div class="card-content">
+                                    <a href="http://nemoubliepas.samanthasaffache.fr/" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Réminiscence</h2>
+                                <h2 class="card-title">Zoé Schoellhammer</h2>
+                                <img src="img/Caroussel/siteZoe.jpg" />
+                                <div class="card-content">
+                                    <a href="http://reminiscence.zoeschoellhammer.fr/" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-item">
+                            <div class="card">
+                                <h2 class="card-title">Society Mind</h2>
+                                <h2 class="card-title">Emma Wettle</h2>
+                                <img src="img/Caroussel/siteEmma.png" />
+                                <div class="card-content">
+                                    <a href="https://societymind.emmawettle.fr/" class="button__caroussel">Read more</a>
+                                </div>
+                            </div>
+                        </li>
+
+            </section>
+            </main>
+            <footer class="footer">
+
+
+                <section class="footer__fond">
+    
+                    <a href="Contact_en.html"><h3 class="footer__title">Give your opinion!</h3>
+                        <p class=footer__link__text>Contact form</p>
+                    </a>
+        
+                    <h3 class="footer__title">Legal information</h3>
+                    <address class=footer__link__text>
+                        <p class=footer__link__text> Project realized for a pedagogical exercise in the department
+                            
+                            <a href="http://mmimontbeliard.com/">MMI department of Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                        </p>
+                    </address>
+    
+                    <h3 class="footer__title">Contact me</h3>
+                    <address>
+                        <p class=footer__link__text>Atnan Tas C2 <br>
+                            <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                        </p>
+                    </address>
+                    
+                    <li class=reseaux__sociaux>
+    
+                        <div class="reseau__fb"><a href="https://www.facebook.com">
+                        <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+    
+                        <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                        <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                                    
+                       
+                        <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                        <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+                    </li>
+    
+                    <div class="trait__menu"></div>
+                    <ul class="langue">
+                        <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                        <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+                    </ul>
+                </section>
+            </footer> 
+    
+    
+        </body>
+    </html>
