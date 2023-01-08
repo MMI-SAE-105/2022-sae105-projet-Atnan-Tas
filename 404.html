@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="Fond" lang="fr" x-data="{articleOpen: false, menuIsOpen: false}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reboot">
+        <title>Reboot</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+
+    <body>
+        <header class="header" x-data="{ menuIsOpen : false }">
+
+            <div class="header__start">
+              <a href="/">
+                <img class="header__logo__1" src="Bouton/Logo_site.svg" alt="logo reboot">
+              </a>
+            </div>
+
+            
+                    
+                    <button class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+                    @pointerdown="menuIsOpen = !menuIsOpen" 
+                    :class="menuIsOpen && 'menu-btn--open'">
+            <span class="menu-btn__bar"></span>
+            </button>
+
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+            <ul class="menu__list list-unstyled">
+                <ul class="langue">
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">
+                        <img class="drapeau" src="icone/drapeau_FR.svg" alt="drapeau français">
+                    </a></li>
+                    <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">
+                        <img class="drapeau" src="icone/drapeau_UK.svg" alt="drapeau Anglais">
+                    </a></li>
+                </ul>
+
+                <dl>
+                    <dt  aria-controls="dd1" @click="articleOpen = ! articleOpen">
+                      <p class="menuarticle">Articles</p>
+                    </dt>
+                    <dd id="dd1" x-show="articleOpen" x-transition.duration.400ms>
+                      <li class="liste"><a class="liste" href="ArticleAA.html">Accor Arena</a></li>
+                      <li class="liste"><a class="liste" href="ArticleJoJo.html">JoJo's Bizarre Adventures</a></li>
+                      <li class="liste"><a class="liste" href="ArticleFC.html">Fight Club</a></li>
+                      <li class="liste"><a class="liste" href="ArticlePNL.html">La misère est si belle - PNL</a></li>
+                      <li class="liste"><a class="liste" href="ArticleVS.html">Vinland Saga</a></li>
+                      <li class="liste"><a class="liste" href="ArticleEcran.html">Dangers des écrans</a></li>
+                      <li class="liste"><a class="liste" href="ArticleWeb3.html">Web 3.0</a></li></dd>
+                <div class="trait__menu"></div>
+
+
+                <li class="menu__item"><a class="menu__link__titre" href="AutreProjet.html">D'autres projets</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Apropos.html">En savoir +</a></li>
+                <div class="trait__menu"></div>
+                <li class="menu__item"><a class="menu__link__titre" href="Contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+    <div class="info">
+      <p class="bio"> Bonjour, je me présente, Atnan Tas en 1ère année de MMI (Métier Multimédia Internet). 
+<br> 
+      Je suis passionné par internet, créer un site web est donc une occasion pour moi d’en apprendre plus de ce milieu.
+      <br>
+       site est dédié à mon moi du futur, j’éspère qu’il passe par là. 
+      
+      Je vous donc laisse apprécier mon site web.</p>
+    </div>
+<br> <br>
+<hr class="hrpage">
+<br> <br>
+<h1 class="titrepage">Contact</h1>
+<br> <br>
+<hr class="hrgrand">
+<br> <br>
+    <form class="formulaire" action="#">
+      <div>
+          <label class="texte_contacte" for="Prénom">Prénom</label><br>
+          <br><input class="rectangle_contacte" type="text" name="Prénom" id="Prénom">
+        </div>
+      
+       <br> <div>
+          <label class="texte_contacte" for="Nom">Nom</label><br>
+          <br><input class="rectangle_contacte" type="text" name="Nom" id="Nom">
+        </div>
+      
+       <br> <div>
+          <label class="texte_contacte" for="E-mail">E-mail</label><br>
+          <br><input class="rectangle_contacte" type="text" name="E-mail" id="E-mail">
+        </div>
+      
+      <br> <div>
+          <label class="texte_contacte" for="message">Message</label><br>
+          <br><textarea class="rectangle_contacte" rows="5" name="message" id="message"></textarea>
+        </div>
+      
+      <br><button class="bouton_contacte_envoyer" type="Envoyer">Envoyer</button>
+      
+      </form>
+      </head>
+      <footer class="footer">
+
+
+        <section class="footer__fond">
+
+            <a href="Contact.html"><h3 class="footer__title">Donnez votre avis ! </h3>
+                <p class=footer__link__text>Formulaire de contact</p>
+            </a>
+
+            <h3 class="footer__title">Mentions légales</h3>
+            <address class=footer__link__text>
+                <p class=footer__link__text> Projet réalisé dans le cadre d'un exercice pédagogique au département
+                    <a href="http://mmimontbeliard.com/">MMI de Montbéliard<img src="img/footer/Logo_mmi.svg" alt="Iconmmi">
+                </p>
+            </address>
+
+            <h3 class="footer__title">Me contacter</h3>
+            <address>
+                <p class=footer__link__text>Atnan Tas C2 <br>
+                    <a href="mailto:atnan.tas68@gmail.com">atnan.tas68@gmail.com</a>
+                </p>
+            </address>
+            
+            <li class=reseaux__sociaux>
+
+                <div class="reseau__fb"><a href="https://www.facebook.com">
+                <img src="Icone/facebook_blanc.svg" alt="IconFacebook"></a></div>
+
+                <div class="reseau__insta"><a href="https://www.instagram.com/atnanvreel/">
+                <img src="Icone/instagram_blanc.svg" alt="IconInstragram"></a></div>
+                            
+               
+                <div class="reseau__lin"><a href="https://www.linkedin.com/in/atnan-tas-8a4b82257/">
+                <img src="Icone/linkedin_blanc.svg" alt="IconLinkedin"></a></div>
+            </li>
+
+            <div class="trait__menu"></div>
+            <ul class="langue">
+                <li class="menu__item"><a class="menu__link__titre__langue" href="index.html">Fr</a></li>
+                <li class="menu__item"><a class="menu__link__titre__langue" href="index_english.html">En</a></li>
+            </ul>
+        </section>
+    </footer> 
+
+
+</body>
+</html>
