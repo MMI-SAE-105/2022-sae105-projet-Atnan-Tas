@@ -224,6 +224,9 @@ button {
       padding-bottom: 30px;
       padding-right: 10px;
       padding-top: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-radius: 15px;
     }
 
     h3 {
