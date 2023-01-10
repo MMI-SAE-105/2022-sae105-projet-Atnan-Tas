@@ -8,13 +8,15 @@
   position: fixed;
   top: 0; bottom: 0;
   left: 0; right : 0;
-  background: linear-gradient(to bottom right, #8f24c4, #30144b);
+  background: var(--jaune-principal);
   transition: all .4s ease-in-out;
 }
 
 .menu--open {
   visibility: visible;
-  opacity: 1
+  opacity: 1;
+  background: var(--jaune-principal);
+
 }
 
 .menu__list {
