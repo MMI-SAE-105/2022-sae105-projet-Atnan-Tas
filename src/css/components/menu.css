@@ -77,7 +77,6 @@
   width: 30px;
   margin-top: -120px;
   margin-right: -10px;
-  
 }
 
 .menu-btn__bar,
@@ -91,6 +90,8 @@
   left: 0;
   z-index: 10;
   transition: all .4s ease-in-out;
+  border: none;
+
 }
 
 .menu-btn__bar::before {
